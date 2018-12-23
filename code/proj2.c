@@ -3,10 +3,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-int print_short(int out_fmt,int signd, int width, int precision, int pas,int xorX, int x) {
+int print_short(int out_fmt,int signd, int width, int precision, int pas,int xorX, int p) {
 	int cnt = 0;
-	short p = x;
-	if(signd && p < 0)	putchar('-');
+	short x = p;
+	if(signd && p < 0) {
+		putchar('-');
+		x = -x;
+	}
 	int argv_int [50];
 	int pos = 0;
 	while(x) {
@@ -39,8 +42,10 @@ int print_short(int out_fmt,int signd, int width, int precision, int pas,int xor
 
 int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX, int x) {
 	int cnt = 0;
-	int p = x;
-	if(signd && p < 0)	putchar('-');
+	if(signd && x < 0) {
+		putchar('-');
+		x = -x;
+	}		
 	int argv_int [50];
 	int pos = 0;
 	while(x) {
@@ -71,6 +76,8 @@ int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX
 	}
 	return cnt;
 }
+
+double eps = 1e-9;
 
 int myprintf(const char* format,...) {
 	int argv_int[50];
@@ -178,12 +185,41 @@ int myprintf(const char* format,...) {
 					cnt += min_width;
 				}
 			}
+			else	if(format[cur] == 's') {
+
+			}
 			else	if(format[cur] == '%') {
 				putchar('%');
 				++cnt;
 			}
-			else	if(format[cur] == ' ') {
-
+			else	if(format[cur] == 'f') {
+				double k = va_arg(ap,double);
+				if(float_format == -1)	float_format = 6;
+				int p = 0,q = 0;
+				int x = k;	double y = k - x;
+				int pos = 0;
+				while(x) {
+					argv_int[pos++] = x % 10;
+					x /= 10;
+				}
+				int sum = pos + float_format + 1;
+			   	if(sum < min_width && out_format == -1) {
+					int kk = min_width - sum;
+					while(kk--)	putchar(' '),cnt++;
+				}
+				for(int i = pos - 1; i >= 0; i--)	putchar(argv_int[i] + '0'),cnt++;
+				putchar('.'),cnt++;
+				for(int i = 1; i < float_format; i++) {
+					putchar((int)((y + eps) * 10) + '0'),cnt++;
+					y = (y * 10 - (int) ((y + eps) * 10));
+				}
+				int last_one = (y + eps) * 10;	y = (y * 10 -(int) ((y + eps) * 10));
+				if((y + eps) * 10 >= 5)	last_one++;
+				putchar(last_one + '0');	cnt++;
+				if(sum < min_width && out_format == 1) {
+					int kk = min_width - sum;
+					while(kk--)	putchar(' '),cnt++;
+				}
 			}
 		}
 		else {
@@ -197,16 +233,21 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-	/*int a = 20, b = 30, n = -3221;
-	int c = 15, d = 240;
-	void *p = &c, *q = &d;
-	myprintf("%u %i\n", a, a+b);
-	printf("%u %i\n", a, a+b);
-	myprintf("%d %o %x %X\n",n,c,d,d);
-	myprintf("%c %c %c %c\n",'a','b','c','d');
-	myprintf("%c %c %c %c\n",'a','b','c','d');
-	myprintf("%p %p\n",p,q);
-	printf("%p %p\n",p,q);*/
+	int a = 5;
+	char b = 'a';
+	double c = 1.2345678, d = 3223.122345623;
+	myprintf("%d %-.5f %14f %c",a,c,d,b);
+//	int a = 20, b = 30, n = -3221;
+//	int c = 15, d = 240;
+//	void *p = &c, *q = &d;
+//	myprintf("%u %i\n", a, a+b);
+//	printf("%u %i\n", a, a+b);
+//	myprintf("%d %o %x %X\n",n,c,d,d);
+//	printf("%d %o %x %X\n",n,c,d,d);
+//	myprintf("%c %c %c %c\n",'a','b','c','d');
+//	myprintf("%c %c %c %c\n",'a','b','c','d');
+//	myprintf("%p %p\n",p,q);
+//	printf("%p %p\n",p,q);
 //	int a = 5;
 //	int* p = &a;
 //	myprintf("%16p\n", p);
@@ -214,9 +255,9 @@ int main() {
 //	char c = 'a', b = 'd';
 //	myprintf("%-3c %6c\n",c,b);
 //	printf("%-3c %6c\n",c,b);
-	int a = 5, b = 16;
-	int x = myprintf("%5.3d\n",a);
-	int y = printf("%5.3d\n",a);
-	myprintf("%d %d\n",x,y);
+//	int a = 5, b = 16;
+//	int x = myprintf("%5.3d\n",a);
+//	int y = printf("%5.3d\n",a);
+//	myprintf("%d %d\n",x,y);
 	return 0;
 }
