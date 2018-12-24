@@ -7,7 +7,7 @@ int print_short(int out_fmt,int signd, int width, int precision, int pas,int xor
 	int cnt = 0;
 	short x = p;
 	if(signd && p < 0) {
-		putchar('-');
+		putchar('-'),++cnt;
 		x = -x;
 	}
 	int argv_int [50];
@@ -19,9 +19,9 @@ int print_short(int out_fmt,int signd, int width, int precision, int pas,int xor
 	int maxk = width < precision? precision : width;
 	if(maxk <= pos) {
 		for(int i = pos - 1; i >= 0; i--) {
-			if(argv_int[i] >= 10 && xorX == 1)	putchar('A' + argv_int[i] - 10),cnt++;
-			else	if(argv_int[i] >= 10)	putchar('a' +argv_int[i] -10),cnt++;
-			else	putchar('0' + argv_int[i]),cnt++;
+			if(argv_int[i] >= 10 && xorX == 1)	putchar('A' + argv_int[i] - 10),++cnt;
+			else	if(argv_int[i] >= 10)	putchar('a' +argv_int[i] -10),++cnt;
+			else	putchar('0' + argv_int[i]),++cnt;
 		}
 	}
 	else {
@@ -30,11 +30,11 @@ int print_short(int out_fmt,int signd, int width, int precision, int pas,int xor
 		int sum2 = precision - pos;
 		if(sum2 < 0)		sum2 = 0;
 		if(out_fmt == -1) {
-			while(sum1--)	putchar(' '),cnt++;
+			while(sum1--)	putchar(' '),++cnt;
 		}
-		while(sum2--)	putchar('0'),cnt++;
+		while(sum2--)	putchar('0'),++cnt;
 		if(out_fmt == 1) {
-			while(sum1--)	putchar(' '),cnt++;
+			while(sum1--)	putchar(' '),++cnt;
 		}
 	}
 	return cnt;
@@ -43,7 +43,7 @@ int print_short(int out_fmt,int signd, int width, int precision, int pas,int xor
 int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX, int x) {
 	int cnt = 0;
 	if(signd && x < 0) {
-		putchar('-');
+		putchar('-'),++cnt;
 		x = -x;
 	}		
 	int argv_int [50];
@@ -55,9 +55,9 @@ int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX
 	int maxk = width < precision? precision : width;
 	if(maxk <= pos) {
 		for(int i = pos - 1; i >= 0; i--) {
-			if(argv_int[i] >= 10 && xorX == 1)	putchar('A' + argv_int[i] - 10),cnt++;
-			else	if(argv_int[i] >= 10)	putchar('a' +argv_int[i] -10),cnt++;
-			else	putchar('0' + argv_int[i]),cnt++;
+			if(argv_int[i] >= 10 && xorX == 1)	putchar('A' + argv_int[i] - 10),++cnt;
+			else	if(argv_int[i] >= 10)	putchar('a' +argv_int[i] -10),++cnt;
+			else	putchar('0' + argv_int[i]),++cnt;
 		}
 	}
 	else {
@@ -66,12 +66,12 @@ int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX
 		int sum2 = precision - pos;
 		if(sum2 < 0)		sum2 = 0;
 		if(out_fmt == -1) {
-			while(sum1--)	putchar(' '),cnt++;
+			while(sum1--)	putchar(' '),++cnt;
 		}
-		while(sum2--)	putchar('0'),cnt++;
-		for(int i = pos - 1; i >= 0; i--)	putchar('0' + argv_int[i]),cnt++;
+		while(sum2--)	putchar('0'),++cnt;
+		for(int i = pos - 1; i >= 0; i--)	putchar('0' + argv_int[i]),++cnt;
 		if(out_fmt == 1) {
-			while(sum1--)	putchar(' '),cnt++;
+			while(sum1--)	putchar(' '),++cnt;
 		}
 	}
 	return cnt;
@@ -147,18 +147,17 @@ int myprintf(const char* format,...) {
 				else {
 					int sum = min_width - 1;
 					if(out_format == 1) {
-						putchar(ch);
-						while(sum--)	putchar(' ');
+						putchar(ch),++cnt;
+						while(sum--)	putchar(' '),++cnt;
 					}
 					else {
-						while(sum--)	putchar(' ');
-						putchar(ch);
+						while(sum--)	putchar(' '),++cnt;
+						putchar(ch),++cnt;
 					}
-					cnt += min_width;
 				}
 			}
 			else	if(format[cur] == 'p') {
-				void* pp = va_arg(ap,void*);
+				void *pp = va_arg(ap,void*);
 				unsigned long long p = (unsigned long long)pp;
 				int pos = 0;
 				while(p) {
@@ -176,21 +175,27 @@ int myprintf(const char* format,...) {
 				else {
 					int sum = min_width - pos - 2;
 					if(out_format == -1)
-						while(sum--)	putchar(' ');
-					putchar('0');	putchar('x');
+						while(sum--)	putchar(' '),++cnt;
+					putchar('0'),++cnt;	putchar('x'),++cnt;
 					for(int i = pos - 1; i >= 0; i--) {
-						if(argv_int[i] >= 10)	putchar('a' + argv_int[i] - 10);
-						else	putchar('0' + argv_int[i]);
+						if(argv_int[i] >= 10)	putchar('a' + argv_int[i] - 10),++cnt;
+						else	putchar('0' + argv_int[i]),++cnt;
 					}
 					cnt += min_width;
 				}
 			}
 			else	if(format[cur] == 's') {
-
-			}
-			else	if(format[cur] == '%') {
-				putchar('%');
-				++cnt;
+				char *pp = va_arg(ap,char*);
+				int l = strlen(pp);
+				if(min_width > l && out_format == -1) {
+					int sum = min_width - l;
+					while(sum--)	putchar(' '),++cnt;
+				}
+				for(int i = 0; i < l; i++)	putchar(pp[i]),++cnt;
+				if(min_width > l && out_format == 1) {
+					int sum = min_width - l;
+					while(sum--)	putchar('-'),++cnt;
+				}
 			}
 			else	if(format[cur] == 'f') {
 				double k = va_arg(ap,double);
@@ -205,21 +210,25 @@ int myprintf(const char* format,...) {
 				int sum = pos + float_format + 1;
 			   	if(sum < min_width && out_format == -1) {
 					int kk = min_width - sum;
-					while(kk--)	putchar(' '),cnt++;
+					while(kk--)	putchar(' '),++cnt;
 				}
-				for(int i = pos - 1; i >= 0; i--)	putchar(argv_int[i] + '0'),cnt++;
-				putchar('.'),cnt++;
+				for(int i = pos - 1; i >= 0; i--)	putchar(argv_int[i] + '0'),++cnt;
+				putchar('.'),++cnt;
 				for(int i = 1; i < float_format; i++) {
-					putchar((int)((y + eps) * 10) + '0'),cnt++;
+					putchar((int)((y + eps) * 10) + '0'),++cnt;
 					y = (y * 10 - (int) ((y + eps) * 10));
 				}
 				int last_one = (y + eps) * 10;	y = (y * 10 -(int) ((y + eps) * 10));
 				if((y + eps) * 10 >= 5)	last_one++;
-				putchar(last_one + '0');	cnt++;
+				putchar(last_one + '0');	++cnt;
 				if(sum < min_width && out_format == 1) {
 					int kk = min_width - sum;
-					while(kk--)	putchar(' '),cnt++;
+					while(kk--)	putchar(' '),++cnt;
 				}
+			}
+			else	if(format[cur] == '%') {
+				putchar('%');
+				++cnt;
 			}
 		}
 		else {
@@ -233,10 +242,13 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-	int a = 5;
-	char b = 'a';
-	double c = 1.2345678, d = 3223.122345623;
-	myprintf("%d %-.5f %14f %c",a,c,d,b);
+	char a[50] = "formatf";
+	myprintf("%s %14s",a,a);
+	system("pause");
+//	int a = 5;
+//	char b = 'a';
+//	double c = 1.2345678, d = 3223.122345623;
+//	myprintf("%d %-.5f %14f %c",a,c,d,b);
 //	int a = 20, b = 30, n = -3221;
 //	int c = 15, d = 240;
 //	void *p = &c, *q = &d;
