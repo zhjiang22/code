@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int year,month,day,l,k,i,sum=0;
+    int a[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+    scanf("%d%d%d",&year,&month,&day);
+    k=month;i=day;
+    for(l=year;l<=2008;l++)
+    {   if((l%4==0&&l%100!=0)||l%400==0)
+        a[2]=29;
+        else a[2]=28;
+        for(k;k<=12;k++)
+        {
+            for(i;i<=a[k];i++)
+            {sum++;if(l==2008&&k==8&&i==7) return !printf("%d",sum);}
+            i=1;
+        }
+        k=1;
+    }
+}

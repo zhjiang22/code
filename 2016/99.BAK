@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char a[100];
+int i,j,b,ok=0;
+gets(a);
+b=sizeof(a);
+for(i=0;i<b;i++)
+{
+if(a[i]=='"'&&!ok)
+{
+printf("``");
+ok=!ok;
+continue;
+}
+if(a[i]=='"'&&ok)
+{
+printf("''");
+ok=!ok;
+}
+else
+printf("%c",a[i]);
+}
+return 0;
+}

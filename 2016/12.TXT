@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+char a[100];
+int n,i=0,j=1,m,c=0;
+scanf("%d\n",&n);
+gets(a);
+for(i=0;i<n;i++)
+{
+c+=(a[i]-48)*j;
+j*=2;
+}
+printf("%d",c);
+return 0;
+}

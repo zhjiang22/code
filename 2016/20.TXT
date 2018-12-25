@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+int a,x,y,min=10000,max=0;
+scanf("%d",&a);
+for(x=0;x<=(a/4);x++)
+{
+y=(a-4*x)/2;
+min=(min<x+y)?min:x+y;
+max=(max>x+y)?max:x+y;
+}
+printf("%d %d",min,max);
+return 0;
+}

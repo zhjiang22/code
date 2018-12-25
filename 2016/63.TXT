@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+int a[20];
+int x,y,i=0,j=0,n;
+while(scanf("%d",&n)==1&&n)
+{
+a[i++]=n;
+}
+for(x=0;x<i;x++)
+for(y=0;y<i;y++)
+if(a[x]/a[y]==2&&a[x]%a[y]==0)
+j++;
+printf("%d",j);
+return 0;
+}

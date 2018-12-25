@@ -1,0 +1,13 @@
+#include<stdio.h>
+char a[1000];
+int main()
+{
+    int i;
+    gets(a);
+    i=strlen(a);
+    if(a[i-1]%2==0)
+    printf("ou");
+    else
+    printf("ji");
+    return 0;
+}

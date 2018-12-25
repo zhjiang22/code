@@ -1,0 +1,1 @@
+#include "stdio.h"main(){	char a,b;	a=getchar(); 	scanf("%d",&b);	a=a-'A'+'0';	b=b*2;	printf("%c %c\n",a,b);}

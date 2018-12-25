@@ -1,0 +1,67 @@
+#include<iostream>
+#include<algorithm>
+#include<cstdlib>
+#include<cstdio>
+using namespace std;
+
+const int MAXN=100001;
+int a[MAXN],b[MAXN];
+int i,j,m,k,l;
+
+void Swap()
+{
+	swap(a[i],a[j]);
+	swap(i,j);
+}
+
+void pai(int x,int y)
+{
+	i=x;
+	j=y;
+	while(i!=j)
+	{
+		if(i<j)
+		{
+			if(a[i]>a[j])
+				Swap();
+			else
+				j--;
+		}
+		else
+		{
+			if(a[i]<a[j])
+				Swap();
+			else
+				j++;
+		}
+	}
+	if(i<k)
+	pai(i+1,y);
+	else if(i==k)
+	{
+		for(l=1;i<=m;l++)
+		if(b[l]==a[i])
+		{
+			cout<<l<<endl;
+			break;
+		}
+	}
+	else
+	pai(x,i-1);
+}
+
+int main()
+{
+	cin>>m>>k;
+	for(int e=1;e<=m;e++)
+	{
+	cin>>a[e];
+	b[e]=a[e];
+	}
+	for(i=6;i<=m/5;i++)
+	swap(a[i],a[i*5-2]);
+	sort(a+1,a+i);
+	swap(a[1],a[i/2]);
+	pai(1,m);
+	return 0;
+}

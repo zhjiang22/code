@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int i,a=0,b=0,k,n;
+char x,y,z;
+scanf("%d",&n);
+scanf("%c",&z);
+for(i=0;i<n;i++)
+{
+scanf("%c %c%c",&x,&y,&z);
+if(x==y) {a++;b++;}
+if(x=='S'&&y=='J') a++;
+if(x=='S'&&y=='B') b++;
+if(x=='J'&&y=='B') a++;
+if(x=='J'&&y=='S') b++;
+if(x=='B'&&y=='S') a++;
+if(x=='B'&&y=='J') b++;
+}
+if(a>b)
+printf("ry win");
+if(a<b)
+printf("RY win");
+if(a==b)
+printf("RY=ry");
+return 0;
+}

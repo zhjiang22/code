@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+int n;
+char a[100];
+int check(int i)
+{
+int ok=1,c=0,b,d;
+while(i>=n)
+{
+a[c++]=(i%n);
+i/=n;
+}
+for(b=0;b<(c+1)/2;b++)
+for(d=c-1;d>=(c+1)/2;d--)
+if(a[b]!=a[d]) ok=0;
+return ok;
+}
+int main()
+{
+int i,j,m;
+scanf("%d",m);
+for(m=1;m<=300;m++)
+{
+if(check(m*m))
+{
+

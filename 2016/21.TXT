@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+int n,x,y,z,max=0;
+scanf("%d",&n);
+for(x=0;x<=n;x++)
+for(y=0;y<=n;y++)
+for(z=0;z<=n;z++)
+if((x+y)%2==0&&(y+z)%3==0&&(x+y+z)%5==0)
+max=max>(x+y+z)?max:x+y+z;
+printf("%d",max);
+return 0;
+}
