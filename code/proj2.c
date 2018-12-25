@@ -201,7 +201,7 @@ int myprintf(const char* format,...) {
 				double k = va_arg(ap,double);
                 if(k < 0)   putchar('-'),++cnt,k = -k;
 				if(float_format == -1)	float_format = 6;
-				int x = k;	double y = k - x;
+				long long x = k;	double y = k - x;
 				int pos = 0;
 				while(x) {
 					argv_int[pos++] = x % 10;
@@ -214,13 +214,14 @@ int myprintf(const char* format,...) {
 				}
 				for(int i = pos - 1; i >= 0; i--)	putchar(argv_int[i] + '0'),++cnt;
 				putchar('.'),++cnt;
-				for(int i = 1; i < float_format; i++) {
-					putchar((int)((y + eps) * 10) + '0'),++cnt;
+				for(int i = 1; i <= float_format; i++) {
+                    argv_int[i] = (int)((y + eps) * 10);
 					y = (y * 10 - (int) ((y + eps) * 10));
 				}
-				int last_one = (y + eps) * 10;	y = (y * 10 -(int) ((y + eps) * 10));
-				if((y + eps) * 10 >= 5)	last_one++;
-				putchar(last_one + '0');	++cnt;
+				if((y + eps) * 10 >= 5)	argv_int[float_format]++;
+                int cur = float_format;
+                while(argv_int[cur] == 10) argv_int[cur] = 0, argv_int[cur - 1]++, cur--;
+                for(int i = 1; i <= float_format; i++)  putchar(argv_int[i] + '0'), ++cnt;
 				if(sum < min_width && out_format == 1) {
 		        	int kk = min_width - sum;
 					while(kk--)	putchar(' '),++cnt;
@@ -276,7 +277,9 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-        double k = 22222;
+        double k = 222.2345698;
+        printf("%f\n",k);
+        myprintf("%f\n",k);
         myprintf("%e\n",k);
         printf("%e",k);
     //	char a[50] = "formatf";
