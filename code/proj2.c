@@ -199,8 +199,8 @@ int myprintf(const char* format,...) {
 			}
 			else	if(format[cur] == 'f') {
 				double k = va_arg(ap,double);
+                if(k < 0)   putchar('-'),++cnt,k = -k;
 				if(float_format == -1)	float_format = 6;
-				int p = 0,q = 0;
 				int x = k;	double y = k - x;
 				int pos = 0;
 				while(x) {
@@ -222,54 +222,92 @@ int myprintf(const char* format,...) {
 				if((y + eps) * 10 >= 5)	last_one++;
 				putchar(last_one + '0');	++cnt;
 				if(sum < min_width && out_format == 1) {
-					int kk = min_width - sum;
+		        	int kk = min_width - sum;
 					while(kk--)	putchar(' '),++cnt;
 				}
 			}
-			else	if(format[cur] == '%') {
-				putchar('%');
-				++cnt;
-			}
-		}
-		else {
-			putchar(format[cur]);
-			++cnt;
-		}
-		working = out_format = min_width = float_format = long_format = -1;	
-		cur++;
-	}
-	return cnt;
+            else    if(format[cur] == 'e' || format[cur] == 'E') {
+                double k = va_arg(ap,double);
+                if(k < 0)   putchar('-'),++cnt,k = -k;
+                if(float_format == -1)  float_format = 6;
+                int pos = 0, q = 0;
+                long long x = k;  double y = k - x;
+                argv_int[pos] = 0;
+                while(x) {
+                    argv_int[pos++] = x % 10;
+                    x /= 10;
+                }
+                if(pos == 0)    ++pos;
+                if(pos >= 1 && argv_int[0] != 0) {
+                    int minw = pos < (float_format + 1) ? pos :float_format + 1;
+                    putchar('0' + argv_int[pos-1]);
+                    putchar('.');   ++cnt;
+                    int coo = 1;
+                    for(int i = pos - 2; i >= 0 && coo < minw; i++)   putchar('0' + argv_int[i]),++cnt,++coo;
+                    if(pos < float_format + 1) {
+                        int rest = float_format - pos + 1;
+                        for(int i = 1; i < rest; i++) {
+                            putchar((int)((y + eps) * 10) + '0'),++cnt;
+                            y = (y * 10 - (int) ((y + eps) * 10));
+                        }
+                    }
+                    int last_one = (y + eps) * 10;  y = (y * 10 - (int) ((y + eps) * 10));
+                    if((y + eps) * 10 >= 5) last_one++;
+                    putchar(last_one + '0'),++cnt;
+                    if(format[cur] == 'e')  putchar('e'),++cnt;
+                    else    putchar('E');
+                    putchar('+');
+                    cnt += myprintf("%d",pos - 1);
+                }
+            }
+            else	if(format[cur] == '%') {
+                putchar('%');
+                ++cnt;
+            }
+        }
+        else {
+            putchar(format[cur]);
+            ++cnt;
+        }
+        working = out_format = min_width = float_format = long_format = -1;	
+        cur++;
+    }
+    return cnt;
 }
 
 int main() {
-	char a[50] = "formatf";
-	myprintf("%s %14s",a,a);
-	system("pause");
-//	int a = 5;
-//	char b = 'a';
-//	double c = 1.2345678, d = 3223.122345623;
-//	myprintf("%d %-.5f %14f %c",a,c,d,b);
-//	int a = 20, b = 30, n = -3221;
-//	int c = 15, d = 240;
-//	void *p = &c, *q = &d;
-//	myprintf("%u %i\n", a, a+b);
-//	printf("%u %i\n", a, a+b);
-//	myprintf("%d %o %x %X\n",n,c,d,d);
-//	printf("%d %o %x %X\n",n,c,d,d);
-//	myprintf("%c %c %c %c\n",'a','b','c','d');
-//	myprintf("%c %c %c %c\n",'a','b','c','d');
-//	myprintf("%p %p\n",p,q);
-//	printf("%p %p\n",p,q);
-//	int a = 5;
-//	int* p = &a;
-//	myprintf("%16p\n", p);
-//	printf("%16p\n", p);
-//	char c = 'a', b = 'd';
-//	myprintf("%-3c %6c\n",c,b);
-//	printf("%-3c %6c\n",c,b);
-//	int a = 5, b = 16;
-//	int x = myprintf("%5.3d\n",a);
-//	int y = printf("%5.3d\n",a);
-//	myprintf("%d %d\n",x,y);
-	return 0;
+        double k = 22222;
+        myprintf("%e\n",k);
+        printf("%e",k);
+    //	char a[50] = "formatf";
+    //    printf("jkfdjlasfjdsa\n");
+    //    return 0;
+    //	myprintf("%s %14s",a,a);
+    //	int a = 5;
+    //	char b = 'a';
+    //	double c = 1.2345678, d = 3223.122345623;
+    //	myprintf("%d %-.5f %14f %c",a,c,d,b);
+    //	int a = 20, b = 30, n = -3221;
+    //	int c = 15, d = 240;
+    //	void *p = &c, *q = &d;
+    //	myprintf("%u %i\n", a, a+b);
+    //	printf("%u %i\n", a, a+b);
+    //	myprintf("%d %o %x %X\n",n,c,d,d);
+    //	printf("%d %o %x %X\n",n,c,d,d);
+    //	myprintf("%c %c %c %c\n",'a','b','c','d');
+    //	myprintf("%c %c %c %c\n",'a','b','c','d');
+    //	myprintf("%p %p\n",p,q);
+    //	printf("%p %p\n",p,q);
+    //	int a = 5;
+    //	int* p = &a;
+    //	myprintf("%16p\n", p);
+    //	printf("%16p\n", p);
+    //	char c = 'a', b = 'd';
+    //	myprintf("%-3c %6c\n",c,b);
+    //	printf("%-3c %6c\n",c,b);
+    //	int a = 5, b = 16;
+    //	int x = myprintf("%5.3d\n",a);
+    //	int y = printf("%5.3d\n",a);
+    //	myprintf("%d %d\n",x,y);
+    return 0;
 }
