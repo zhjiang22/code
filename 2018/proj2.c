@@ -216,11 +216,11 @@ int myprintf(const char* format,...) {
 				putchar('.'),++cnt;
 				for(int i = 1; i <= float_format; i++) {
                     argv_int[i] = (int)((y + eps) * 10);
-					y = (y * 10 - (int) ((y + eps) * 10));
+					y = (y * 10 - (int)((y + eps) * 10));
 				}
 				if((y + eps) * 10 >= 5)	argv_int[float_format]++;
                 int cur = float_format;
-                while(argv_int[cur] == 10) argv_int[cur] = 0, argv_int[cur - 1]++, cur--;
+                while(argv_int[cur] >= 10) argv_int[cur] -= 10, argv_int[cur - 1]++, cur--;
                 for(int i = 1; i <= float_format; i++)  putchar(argv_int[i] + '0'), ++cnt;
 				if(sum < min_width && out_format == 1) {
 		        	int kk = min_width - sum;
@@ -228,6 +228,7 @@ int myprintf(const char* format,...) {
 				}
 			}
             else    if(format[cur] == 'e' || format[cur] == 'E') {
+                int argv_num[100];
                 double k = va_arg(ap,double);
                 if(k < 0)   putchar('-'),++cnt,k = -k;
                 if(float_format == -1)  float_format = 6;
@@ -239,26 +240,39 @@ int myprintf(const char* format,...) {
                     x /= 10;
                 }
                 if(pos == 0)    ++pos;
-                if(pos >= 1 && argv_int[0] != 0) {
+                if( argv_int[0] != 0) {
                     int minw = pos < (float_format + 1) ? pos :float_format + 1;
                     putchar('0' + argv_int[pos-1]);
                     putchar('.');   ++cnt;
                     int coo = 1;
-                    for(int i = pos - 2; i >= 0 && coo < minw; i++)   putchar('0' + argv_int[i]),++cnt,++coo;
+                    int p;
+                    for(p = pos - 2; p >= 0 && coo < minw; p--)   argv_num[coo++] = argv_int[p],++cnt;
                     if(pos < float_format + 1) {
                         int rest = float_format - pos + 1;
-                        for(int i = 1; i < rest; i++) {
-                            putchar((int)((y + eps) * 10) + '0'),++cnt;
-                            y = (y * 10 - (int) ((y + eps) * 10));
+                        for(int i = 1; i <= rest; i++) {
+                            argv_num[coo++] = (int)((y + eps) * 10);
+                            y = (y * 10 - (int)((y + eps) * 10));
                         }
+                        if((y + eps) * 10 >= 5) argv_num[coo - 1]++;
                     }
-                    int last_one = (y + eps) * 10;  y = (y * 10 - (int) ((y + eps) * 10));
-                    if((y + eps) * 10 >= 5) last_one++;
-                    putchar(last_one + '0'),++cnt;
+                    else     if(argv_int[p] >= 5)    argv_num[coo - 1]++;
+                    p = coo - 1;
+                    while(argv_num[p] >= 10)  argv_num[p] -= 10,argv_num[p - 1]++,p--;
+                    for(int i = 1; i < coo; i++)    putchar(argv_num[i] + '0'),++cnt;
                     if(format[cur] == 'e')  putchar('e'),++cnt;
                     else    putchar('E');
                     putchar('+');
-                    cnt += myprintf("%d",pos - 1);
+                    putchar('0' + (pos - 1) / 10);  putchar('0' + (pos - 1) % 10);  cnt += 2;
+                }
+                else {
+                    int pos = 0;
+                    for(int i = 1; i <= float_format + 1; i++) {
+                        argv_int[pos++] = (int)((y + eps) * 10);
+                        y = (y * 10 - (int)((y + eps) * 10));
+                    }
+                    if((y + eps) * 10 >= 5) argv_int[pos - 1]++;
+                    int p = pos - 1;
+                    while(argv_int[p] >= 10)  argv_int[p] -= 10,argv_int[p - 1]++,p--;
                 }
             }
             else	if(format[cur] == '%') {
@@ -277,11 +291,13 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-        double k = 222.2345698;
-        printf("%f\n",k);
-        myprintf("%f\n",k);
-        myprintf("%e\n",k);
-        printf("%e",k);
+            double k = 0.000000000001;
+            printf("%.13e\n",k);
+  //      printf("%.7e\n",k);
+   //     myprintf("%.7e\n",k);
+    //    double k = 55555555555555;
+     //   myprintf("%e\n",k);
+    //    printf("%e\n",k);
     //	char a[50] = "formatf";
     //    printf("jkfdjlasfjdsa\n");
     //    return 0;
