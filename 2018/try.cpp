@@ -1,26 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void init() {
-	// int a = 5, b = 6;
-	// double c = 23.32323;
-/*	printf("%-c %-c\n",'d','a');
-	printf("%-2c %-2c\n",'d','a');
-	printf("%2c %2c\n",'d','a');
-	printf("%0c %-0c\n",'d','a');
-	int* p = &a;
-	printf("%16p\n", p);*/
-	//printf("%5.3d\n",a);
-	char c = 'a', b = 'd';
-	printf("%3c %6c\n", c,b);
-}
+int h, s;
+int f[25];
 
-void work() {
-
+int dfs(int cur) {
+    if(cur <= s)    return f[cur] = 1;
+    if(f[cur])  return f[cur];
+    for(int i = 1; i <= s; i++)
+        f[cur] += dfs(cur - i);
+    return f[cur];
 }
 
 int main() {
-	init();
-	work();
+    cin>>h>>s;
+    printf("%d\n",dfs(h));
 	return 0;
 }
