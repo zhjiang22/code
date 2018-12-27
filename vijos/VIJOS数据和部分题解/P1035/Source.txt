@@ -1,0 +1,2 @@
+from USACO
+cdwind ХыАн

@@ -1,0 +1,1 @@
+    The input will consist of a set (less than 11) of pairs of values for R and n. The R value will occupy columns 1 through 6, and the n value will be in columns 8 and 9.

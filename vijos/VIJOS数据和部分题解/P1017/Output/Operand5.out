@@ -1,0 +1,8 @@
+Expression putot:
+op(1,putot)=(a*b*d)
+op(1,op(1,putot))=a*b*d
+op(2,op(2,putot))=e
+op(1,op(2,putot))=(a*c)
+op(1,op(1,op(2,putot)))=a*c
+op(1,op(1,op(3,putot)))=d*f
+op(2,op(1,op(3,putot)))=g

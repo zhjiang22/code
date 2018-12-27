@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 5e6 + 5;
+const int MAXN = 5e6;
 short a[MAXN];
 int n,k;
 
 void quick_select(int l, int r, int k) {
     if(l == r && k == r) {
-        printf("%d\n",a[l]);
+        printf("%hd\n",a[l]);
         return;
     }
     if(l == r)  return;

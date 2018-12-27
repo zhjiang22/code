@@ -1,0 +1,8 @@
+Sample input #2
+3 2
+1 2 2
+2 3 2
+
+Sample output #2
+Cost: 4
+Cost: -1

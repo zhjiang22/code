@@ -1,0 +1,2 @@
+FD 1 is redundant using FDs: 20
+FD 15 is redundant using FDs: 16

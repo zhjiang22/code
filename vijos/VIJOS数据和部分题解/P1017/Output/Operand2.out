@@ -1,0 +1,5 @@
+Expression p:
+op(4,p)=(a*b*c*(a+b)*b(b+c)+a)
+op(1,op(1,op(4,p)))=a*b*c*(a+b)*b(b+c)
+op(1,op(1,op(1,op(4,p))))=a
+op(3,op(1,op(1,op(4,p))))=c

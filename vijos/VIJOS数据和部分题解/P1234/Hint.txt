@@ -1,0 +1,7 @@
+ÑùÀý2£º
+Input:
+3 1 1
+1 2 1
+
+Output:
+No Answer

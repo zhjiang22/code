@@ -1,0 +1,8 @@
+[样例说明]
+输出对应的划分：
+sillysnoopyn isnotv biga tablen.
+baleinen kickv snoopyn sillya cryv.	
+如果用下面的划分：
+sillya snoopyn isnotv biga tablen.
+baleinen kickv snoopyn sillya cryv.
+则划分的句子数仍为2个，但单词数却多了1个，为10个，显然应该按前者而不是后者划分。

@@ -1,0 +1,2 @@
+FD 3 is redundant using FDs: 1
+FD 5 is redundant using FDs: 4 6 2

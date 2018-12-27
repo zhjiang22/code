@@ -1,0 +1,9 @@
+8
+ABCE->D
+D->X
+X->Y
+Y->Z
+Z->D
+DE->FD
+K->TXB
+X->YZV

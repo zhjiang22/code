@@ -1,0 +1,9 @@
+8
+A->B
+XYZ->CD
+CD->PQR
+OP->T
+FV->W
+DE->FD
+K->TX
+X->YZV

@@ -1,0 +1,8 @@
+output 1
+1
+2
+
+output 2
+1
+
+

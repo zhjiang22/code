@@ -1,0 +1,7 @@
+6 		
+P->RST 	
+VRT->SQP
+PS->T
+Q->TR
+QS->P
+SR->V

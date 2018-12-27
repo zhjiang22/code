@@ -1,0 +1,6 @@
+5
+A->BC
+B->CD
+DE->FD
+K->TX
+X->YZV

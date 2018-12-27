@@ -1,0 +1,21 @@
+Sample input #2
+270
+4
+100
+110
+160
+170
+
+Sample output #2
+-1
+
+Sample input #3
+270
+4
+100
+120
+160
+180
+
+Sample output #3
+0

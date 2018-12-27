@@ -1,0 +1,3 @@
+【样例的变化过程】
+时刻0时bdbdb→时刻1时dbbbb
+→时刻2时bbddd→时刻3时bdbdd

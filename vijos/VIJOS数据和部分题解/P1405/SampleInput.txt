@@ -1,0 +1,11 @@
+【样例输入1】
+MEIYOUwsshujuBYhh4742
+14 1 1
+
+【样例输入2】
+oiBYhh4742MEIYOU1013hh4742wsshujuBYhh4742
+34 2 0
+
+【样例输入3】
+ipkepk
+5 3 3

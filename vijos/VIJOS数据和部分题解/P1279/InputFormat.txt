@@ -1,0 +1,4 @@
+一共10行
+每行两个正整数，Ai，Bi  
+对于30%的数据，Ai，Bi<maxint
+对于100%的数据，Ai，Bi<maxlongint;

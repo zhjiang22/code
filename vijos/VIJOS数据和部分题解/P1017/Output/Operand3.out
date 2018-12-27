@@ -1,0 +1,7 @@
+Expression ututut:
+op(1,ututut)=(a+b)^c
+op(2,op(1,ututut))=c
+op(1,op(1,ututut))=(a+b)
+op(1,op(1,op(1,ututut)))=a+b
+op(2,ututut)=(a+b)
+op(1,op(2,ututut))=a+b

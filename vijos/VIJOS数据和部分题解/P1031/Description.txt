@@ -1,0 +1,2 @@
+    奶牛的加密方法如下，在一段文字中，插入三个字母C,O,W，C在O前，O在W前，然后把CO间,OW间夹住的部分换一下。但是，这样太容易被发现了，奶牛们进行了很多次这样的操作（小于10次）。你现在截获了十条密码，请问，它们是否可能由下面这句话加密而成。‘Begin the Escape execution at the Break of Dawn’。
+    输入十行，每行一个字符串，表示一个密码。对于每条密码，输出一行，YES表示能够，NO表示不能够。如：输入第一行为：CBegin the EscCution at the BreOape execWak of OWDawn那么输出的第一行为：YES。

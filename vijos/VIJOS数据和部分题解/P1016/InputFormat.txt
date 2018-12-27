@@ -1,0 +1,2 @@
+    你的程序按照标准的3*3格式读入，一共9个0-3的数。0代表12点，1代表3点，2代表6点，3代表9点。
+    Your program is to read from standard input. Nine numbers give the start positions of the dials. 0=12 o'clock, 1=3 o'clock, 2=6 o'clock, 3=9 o'clock.

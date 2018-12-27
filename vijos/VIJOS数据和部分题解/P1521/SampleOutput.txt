@@ -1,0 +1,11 @@
+Output 1:
+3
+
+Output 2:
+2
+
+Output 3:
+0
+
+Output 4:
+1

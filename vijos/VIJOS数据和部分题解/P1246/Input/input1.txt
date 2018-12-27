@@ -1,0 +1,3 @@
+6 2
+Politics:1-3
+Geography:4-6

@@ -1,0 +1,1 @@
+对每组输入数据输出一行，如果Stan胜利，则输出“Stan wins”；否则输出“Ollie wins”

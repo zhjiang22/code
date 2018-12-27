@@ -1,0 +1,13 @@
+10 10
+..........
+&&&&&&&&&.
+#########.
+D&&&&&&&&.
+#########.
+..........
+.&&&&&&&&&
+.#########
+..........
+#........T
+NWWWWWWWWWNNNEEEEEEEEENNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWNNNEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+100000

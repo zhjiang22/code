@@ -1,0 +1,2 @@
+    你的程序需要写出标准的输出。输出一个最短的能够使所有挂钟指向12点的移动操作序列，中间以空格隔开，最后有空格，加回车。这一条最短操作需要是所有最短操作中最小的，也就是说选择最小的第一个操作数，如果第一个操作数相等，那么选择最小的第二个操作数……以此类推。值得肯定的是，这一条操作序列是唯一的。
+    Your program is to write to standard output. Output a shortest sorted sequence of moves (numbers), which returns all the dials to 12 o'clock. You are convinced that the answer is unique.

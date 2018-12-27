@@ -1,0 +1,4 @@
+input1
+Impossible!
+input2
+15/8

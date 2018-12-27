@@ -291,9 +291,11 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-            double k = 0.000000000001;
-            printf("%.13e\n",k);
+        //    double k = 0.000000000001;
+       //     printf("%.13e\n",k);
   //      printf("%.7e\n",k);
+        double k = 0.32;    int b = 3;
+        printf("%f %d %f",k,b,k);
    //     myprintf("%.7e\n",k);
     //    double k = 55555555555555;
      //   myprintf("%e\n",k);

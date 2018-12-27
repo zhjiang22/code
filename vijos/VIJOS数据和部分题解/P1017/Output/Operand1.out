@@ -1,0 +1,4 @@
+Expression a:
+op(1,a)=x+y
+op(2,op(1,a))=y
+op(1,op(2,op(1,a)))=y

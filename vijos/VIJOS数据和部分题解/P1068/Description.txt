@@ -1,0 +1,15 @@
+    今年春节，xiaomengxian回到了邵阳过年。刚准备进门时，突然发现院子里有个小孩在摆弄什么东西。走进一看，原来他在玩一种智力玩具，叫做“汉诺塔”。“汉诺塔”是这样一种玩具：有三个柱子，分别编号：#1，#2，#3。初始时，有N个直径不同的盘子放在第一根柱子上，且越底下的盘子直径越大。游戏的目的是把所有的盘子转移到第二根柱子上。约束条件是：任何时候都只能把小盘子放在大盘子上。
+    由于盘子数目比较多，小孩玩了很久都没有完成任务。于是，xiaomengxian走上前去，打开随身携带的笔记本电脑，运行了一个很久以前编写的程序。它的主要过程大致是这样的：
+    procedure hanoi(n:integer;from,to_,temp:integer);
+    begin
+      if n>0 then
+      begin
+         hanoi(n-1,from,temp,to_);
+         writeln(n,from,to_);
+         hanoi(n-1,temp,to_,from)
+      end
+    end;
+    有了xiaomengxian的帮助，小孩很快就完成了任务。他在感谢xiaomengxian的同时，又问了一个问题，想考考xiaomengxian。这个问题就是，给出一个中间状态，能否很快的说出这是第几次移动后的状态？
+为了描述方便，对于每一个中间状态，我们定义序列D。其中，Di表示第i小的盘子所在的柱子编号。显然，Di=1，2，3。
+    下面是N=3的例子：
+    [IMG]http://www.Vijos.cn/ProblemImg/P1068.gif[/IMG]

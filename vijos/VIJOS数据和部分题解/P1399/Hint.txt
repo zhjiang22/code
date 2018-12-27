@@ -1,0 +1,6 @@
+2<=n<=100
+1<=t,v<=500
+样例说明
+道路网如图所示【道路上括号外为费时，括号内为过路费】
+[IMG]http://www.vijos.cn/upload/ProblemPic/P1XXX%20from%20%E7%8E%9B%E7%BB%B4-%E5%BD%B1%E4%B9%8B%E6%AD%8C.jpg[/IMG]
+1->4->8即为所求路径，用时为9，费钱为119。
