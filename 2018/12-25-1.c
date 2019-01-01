@@ -19,6 +19,10 @@ void insert(struct Node** head, int num) {
     q->value = num; q->next = p->next;  p->next = q;
 }
 
+void workk() {
+
+}
+
 void print_linklist(struct Node* head) {
     struct Node *p = head->next;
     while(p != NULL) {

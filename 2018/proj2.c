@@ -45,7 +45,7 @@ int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX
 	if(signd && x < 0) {
 		putchar('-'),++cnt;
 		x = -x;
-	}		
+	}
 	int argv_int [50];
 	int pos = 0;
 	while(x) {
@@ -208,7 +208,7 @@ int myprintf(const char* format,...) {
 					x /= 10;
 				}
 				int sum = pos + float_format + 1;
-			   	if(sum < min_width && out_format == -1) {
+				if(sum < min_width && out_format == -1) {
 					int kk = min_width - sum;
 					while(kk--)	putchar(' '),++cnt;
 				}
