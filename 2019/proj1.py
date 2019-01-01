@@ -217,12 +217,12 @@ class GA(object):
                bestindividual=population[i]
  
         return [bestindividual,bestfitness]
- 
- 
+
+
     def plot(self, results):
         X = []
         Y = []
- 
+
         for i in range(500):
             X.append(i)
             Y.append(results[i][0])
@@ -253,6 +253,7 @@ class GA(object):
         results = results[1:]
         results.sort()
         self.plot(results)
+        self.
 
 if __name__ == '__main__':
 

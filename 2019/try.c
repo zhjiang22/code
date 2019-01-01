@@ -1,14 +1,11 @@
 #include <stdio.h>
 
-struct ppp
+int main()
 {
-    unsigned a : 8;
-    unsigned b : 8;
-};
-
-int main() {
-    struct ppp k;
-    k.a = 5;    k.b = 6;
-    printf("%d\n",k.a + k.b);
+    int a, b;
+    freopen("out.txt", "w", stdout);
+    stderr = stdin;
+    fscanf(stderr, "%d", &a);
+    fprintf(stdout, "%d\n", a);
     return 0;
 }

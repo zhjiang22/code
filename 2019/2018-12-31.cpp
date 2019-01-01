@@ -10,7 +10,7 @@ struct ListNode
 
 struct ListNode* ReverseList(struct ListNode *head)
 {
-	if(head == NULL)
+	if(head==NULL)
 		return 0;
 	struct ListNode *p=head;
 	struct ListNode *q=NULL;
