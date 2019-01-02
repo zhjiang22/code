@@ -253,7 +253,6 @@ class GA(object):
         results = results[1:]
         results.sort()
         self.plot(results)
-        self.
 
 if __name__ == '__main__':
 
