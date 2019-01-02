@@ -52,7 +52,7 @@ void deleteTree(TreeNode *root)
     deleteTree(root->left);
     deleteTree(root->right);
     free(root);
-}
+} //why can't free?
 
 int main()
 {
