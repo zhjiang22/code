@@ -5,6 +5,12 @@ int a[100];
 int n;
 
 int main() {
+     vector<int> vv;
+    vv.push_back(4);
+    vv.push_back(5);
+    for(auto p:vv)
+        cout << p << endl;
+    return 0;
     cin >> n;
     int ans = 0;
     for (int i = 1; i <= n; i++) {

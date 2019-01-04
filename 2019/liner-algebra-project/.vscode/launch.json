@@ -2,32 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C++ Launch",
+            "name": "Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build",
+            "program": "${workspaceFolder}/bin/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": true,
             "preLaunchTask": "build",
-            "linux": {
-                "MIMode": "gdb"
-            },
-            "osx": {
-                "MIMode": "lldb"
-            },
-            "windows": {
-                "MIMode": "gdb"
-            }
-        },
-        {
-            "name": "C++ Attach",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "${workspaceRoot}/try",
-            "processId": "${command.pickProcess}",
             "linux": {
                 "MIMode": "gdb"
             },
