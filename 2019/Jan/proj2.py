@@ -3,6 +3,7 @@
 # SYSU is a good University
 # You can lose a lot of hair here.
 # Good luck!
+# 666666666666666
 import random
 import copy
 import time
