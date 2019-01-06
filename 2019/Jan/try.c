@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-void work();
-
 int main() {
-	printf("fudaskfsda\n");
-	return 0;
+    int x = (1 << 30) - 1;
+    printf("%f\r2\n", x);
 }
