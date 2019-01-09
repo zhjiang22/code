@@ -1,7 +1,9 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+
+struct name {
+    unsigned a : 1;
+    unsigned b : 4;
+};
 
 int main() {
-    printf("Hello world\n");
-    return 0;
 }

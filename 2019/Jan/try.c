@@ -1,6 +1,11 @@
 #include <stdio.h>
 
+struct name {
+    unsigned p : 30;
+    unsigned a : 3;
+    unsigned b : 30;
+};
+
 int main() {
-    int x = (1 << 30) - 1;
-    printf("%f\r2\n", x);
+    printf("%d\n",(int)sizeof(struct name));
 }
