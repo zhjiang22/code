@@ -319,7 +319,7 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-	//Test
+	//Test by myself
 	//The first part - %d %i %o %x %X %u
 	int a1 = 5, a2 = 13, a3 = 66666666;
 	int k1 = myprintf("%d %i %-8o %3x %X %u \n", a1, a2, a3, a3, a2, a1);
