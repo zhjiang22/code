@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>Begining</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs2015.css */ /* * Visual Studio 2015 dark style * Author: Nicolas LLOBERA <nllobera@gmail.com> */ .hljs-keyword, .hljs-literal, .hljs-symbol, .hljs-name { color: #569CD6; } .hljs-link { color: #569CD6; text-decoration: underline; } .hljs-built_in, .hljs-type { color: #4EC9B0; } .hljs-number, .hljs-class { color: #B8D7A3; } .hljs-string, .hljs-meta-string { color: #D69D85; } .hljs-regexp, .hljs-template-tag { color: #9A5334; } .hljs-subst, .hljs-function, .hljs-title, .hljs-params, .hljs-formula { color: #DCDCDC; } .hljs-comment, .hljs-quote { color: #57A64A; font-style: italic; } .hljs-doctag { color: #608B4E; } .hljs-meta, .hljs-meta-keyword, .hljs-tag { color: #9B9B9B; } .hljs-variable, .hljs-template-variable { color: #BD63C5; } .hljs-attr, .hljs-attribute, .hljs-builtin-name { color: #9CDCFE; } .hljs-section { color: gold; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; } /*.hljs-code { font-family:'Monospace'; }*/ .hljs-bullet, .hljs-selector-tag, .hljs-selector-id, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo { color: #D7BA7D; } .hljs-addition { background-color: #144212; display: inline-block; width: 100%; } .hljs-deletion { background-color: #600; display: inline-block; width: 100%; } /* From https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs.css */ /* Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name> */ .vscode-light .hljs-function, .vscode-light .hljs-params { color: inherit; } .vscode-light .hljs-comment, .vscode-light .hljs-quote, .vscode-light .hljs-variable { color: #008000; } .vscode-light .hljs-keyword, .vscode-light .hljs-selector-tag, .vscode-light .hljs-built_in, .vscode-light .hljs-name, .vscode-light .hljs-tag { color: #00f; } .vscode-light .hljs-string, .vscode-light .hljs-title, .vscode-light .hljs-section, .vscode-light .hljs-attribute, .vscode-light .hljs-literal, .vscode-light .hljs-template-tag, .vscode-light .hljs-template-variable, .vscode-light .hljs-type, .vscode-light .hljs-addition { color: #a31515; } .vscode-light .hljs-deletion, .vscode-light .hljs-selector-attr, .vscode-light .hljs-selector-pseudo, .vscode-light .hljs-meta { color: #2b91af; } .vscode-light .hljs-doctag { color: #808080; } .vscode-light .hljs-attr { color: #f00; } .vscode-light .hljs-symbol, .vscode-light .hljs-bullet, .vscode-light .hljs-link { color: #00b0e8; } .vscode-light .hljs-emphasis { font-style: italic; } .vscode-light .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <blockquote>
+<p>Ps: <em>小声BB：考前会一直不定期更新QAQ</em><br>
+<strong><s>求不挂科！！!</s></strong></p>
+</blockquote>
+<h2 id="sysu-is-a-good-placeyou-can-lose-a-lot-of-hair-here"><strong>SYSU is a good place.</strong>
+<strong>You can lose a lot of hair here.</strong></h2>
+<h1 id="begining">Begining</h1>
+<hr>
+<h1 id="%E7%A8%8B%E8%AE%BE%E7%90%86%E8%AE%BA%E9%A2%98%E6%9D%82%E8%AE%B2">程设理论题杂讲</h1>
+<h2 id="%E8%BF%90%E7%AE%97%E4%BC%98%E5%85%88%E7%BA%A7%E5%8F%A3%E8%AF%80%E8%AE%B0%E5%BF%86%E8%87%AA%E5%88%9B%E8%BD%BB%E5%96%B7">运算优先级口诀记忆(自创轻喷)</h2>
+<blockquote>
+<ul>
+<li><strong>圆方括号,箭头句号</strong></li>
+<li><strong>自增自减非反负、针强地址和长度</strong></li>
+<li><strong>乘除，加减，再移位</strong></li>
+<li><strong>小等大等</strong></li>
+<li><strong>等等不等</strong></li>
+<li><strong>位与，位异，再位或</strong></li>
+<li><strong>逻辑与再逻辑或</strong></li>
+<li><strong>三疑　二赋　一真逗</strong></li>
+</ul>
+</blockquote>
+<img src="https://timgsa.baidu.com/timg?image%26quality%3D80%26size%3Db9999_10000%26sec%3D1546852957494%26di%3D457073c3a85ebbe6732a5da24c84418a%26imgtype%3D0%26src%3Dhttp%3A%2F%2Fimg.it610.com%2Fimage%2Finfo5%2Fbf3c76b644ab4ccb96045de5921bd240.png"  height="600" width="500">
+<h2 id="%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E7%90%86%E8%AE%BA">程序编译理论</h2>
+<ul>
+<li>源程序    .c<br>
+<strong>preprocessor</strong>   预处理器</li>
+<li>添加了宏的源程序     .i<br>
+<strong>compiler</strong>    编译器</li>
+<li>汇编语言  .s<br>
+<strong>Assembler</strong>   汇编器</li>
+<li>可重定向目标程序  .o(bj)<br>
+<strong>Linker</strong>  链接器</li>
+<li>可执行二进制程序</li>
+</ul>
+<ol>
+<li><strong>Interpreter</strong>                解释器，用于执行解释型语言如Python</li>
+<li><strong>byte code</strong>                  字节码，中间码</li>
+<li><strong>machine/native code</strong>        CPU可直接执行</li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>ASCII码</strong></li>
+<li><strong>Unicode</strong>　中文字符编码方式</li>
+</ul>
+</blockquote>
+<h2 id="%E5%AD%A6%E6%9C%AF%E5%90%8D%E8%AF%8D%E8%8B%B1%E6%96%87">学术名词英文</h2>
+<ul>
+<li><strong>decimal</strong>
+<ul>
+<li>十进制</li>
+</ul>
+</li>
+<li><strong>binary</strong>
+<ul>
+<li>二进制 0b</li>
+</ul>
+</li>
+<li><strong>octal</strong>
+<ul>
+<li>八进制 0</li>
+</ul>
+</li>
+<li><strong>hexadecimal</strong>
+<ul>
+<li>十六进制0x</li>
+</ul>
+</li>
+<li><strong>Escape sequences</strong>
+<ul>
+<li>转义字符</li>
+</ul>
+</li>
+<li><strong>Macros</strong>
+<ul>
+<li>宏</li>
+</ul>
+</li>
+<li><strong>Pass-by-reference</strong>
+<ul>
+<li>引用传递</li>
+</ul>
+</li>
+<li><strong>Pass-by-value</strong>
+<ul>
+<li>值传递</li>
+</ul>
+</li>
+<li><strong>sequence point</strong>
+<ul>
+<li>序列点</li>
+</ul>
+</li>
+<li><strong>side effects</strong>
+<ul>
+<li>副作用</li>
+</ul>
+</li>
+</ul>
+<h2 id="c%E8%AF%AD%E8%A8%80%E5%85%B3%E9%94%AE%E5%AD%97">C语言关键字</h2>
+<img src="https://timgsa.baidu.com/timg?image%26quality%3D80%26size%3Db9999_10000%26sec%3D1547293987802%26di%3D666db8109337333fe27eef75655efb75%26imgtype%3D0%26src%3Dhttp%3A%2F%2Fp8.qhmsg.com%2Ft015bedd7be76999786.png"  height="300" width="600">
+<h2 id="%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D">变量命名</h2>
+<blockquote>
+<p>原则：只能是字母数字和下划线，开头不能是数字</p>
+</blockquote>
+<h4 id="%E5%8F%98%E9%87%8F%E5%90%8D%E9%95%BF%E5%BA%A6">变量名长度</h4>
+<p><strong>可以是任意长度，但只会处理前面一部分</strong></p>
+<ul>
+<li><em>C89</em>:    外部标识符&lt;=6    内部标识符&lt;=31</li>
+<li><em>C99</em>:    外部标识符&lt;=31   内部标识符&lt;=63</li>
+</ul>
+<h4 id="%E5%8F%AF%E7%94%A8%E5%AD%97%E7%AC%A6%E6%95%B0">可用字符数</h4>
+<p>字母 26×2 + 数字 10 + 下划线 1 = 63</p>
+<h2 id="%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E5%88%86%E5%B8%83">程序内存分布</h2>
+<ul>
+<li><strong>文本段(code)</strong>：包含可执行的指令序列</li>
+<li><strong>数据段(data)</strong>：包含已初始化的全局变量与静态变量，并不是只读的</li>
+<li><strong>BSS段</strong>：未初始化的全局变量和静态变量</li>
+<li><strong>Stack</strong>：函数调用与自动变量</li>
+<li><strong>Heap</strong>：动态分配内存的变量</li>
+</ul>
+<h2 id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</h2>
+<blockquote>
+<ol>
+<li><strong>基本类型</strong></li>
+</ol>
+<ul>
+<li>数值类型</li>
+<li>字符类型  (char)</li>
+</ul>
+<ol start="2">
+<li><strong>构造类型</strong></li>
+</ol>
+<ul>
+<li>数组</li>
+<li>结构体</li>
+<li>共用体</li>
+<li>枚举类型</li>
+</ul>
+<ol start="3">
+<li>
+<p><strong>指针类型</strong></p>
+</li>
+<li>
+<p><strong>空类型</strong></p>
+</li>
+</ol>
+</blockquote>
+<h2 id="typedef%E7%94%A8%E6%B3%95">typedef用法</h2>
+<blockquote>
+<ul>
+<li><strong>typedef的使用可以简单理解成正常定义一个变量的方法来完成</strong><br>
+例如<code>typedef struct stu *p</code><br>
+这里和定义一个指向结构体stu的指针p的方法完全相同，只是需要加上一个typedef，ｐ就变成了这种类型的别名</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>结构体定义中是不能包含其本身这个结构体变量的，也就是不能进行递归定义<br>
+　从另一个角度来说，在定义结构体的具体成员的过程中，这个结构体还是一个unkown type name，所以不能包含这种类型的成员<br>
+　但可以定义指向结构体本身类型的指针</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>在做题的时候一定要注意没有typedef的情况下，一定要注意题目中有没有漏掉struct导致ＣＥ</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong><code>typedef typename newname</code>可以出现在typename的定义之前，因为只是起一个标识别名的作用</strong><br>
+<strong>同时可以重复将typename1类型别名为newname1类型，也可以将typename1类型起新的别名newname2</strong><br>
+<strong>但是已经被定义为typename1类型的别名的newname1不可以再更改变为typename2类型的别名，否则CE</strong><br>
+{% highlight C++ %}<br>
+ex:<br>
+typedef int lll;<br>
+typedef long lll;<br>
+//CE</li>
+</ul>
+</blockquote>
+<pre><code>typedef int lll;  
+typedef int lll;  
+//valid
+  
+typedef int lll;  
+typedef int iii;  
+//valid  
+</code></pre>
+<p>{% endhighlight %}</p>
+<h2 id="%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E5%AD%97%E7%AC%A6%E6%8C%87%E9%92%88%E7%9A%84%E5%8C%BA%E5%88%AB">字符串与字符指针的区别</h2>
+<blockquote>
+<ul>
+<li>可以将一个字符串直接赋值给一个字符指针，ex:<code>char *p = &quot;hello&quot;;</code>
+这个过程中　双引号做了3件事：<br>
+1.<strong>申请了空间(在常量区)，存放了字符串</strong><br>
+2.<strong>在字符串尾加上了'/0'</strong><br>
+3.<strong>返回地址</strong><br>
+所以char *p只是负责接收并且存储这个地址，但是需要注意的是p指向的是一个字符串常量<br>
+<strong>如果使用strcpy(s1,s2)来进行字符串的拷贝，而使用p这样的字符串常量的地址作为被粘贴位置s1的话，则会发生段错误</strong><br>
+但字符串常量是可以当作提供赋值内容的s2来使用的　这个应该直观上很好理解</li>
+</ul>
+</blockquote>
+<h2 id="%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F%E6%8C%87%E9%92%88">指针常量与常量指针</h2>
+<blockquote>
+<p><strong>顶层const与底层const</strong><br>
+指针本身是一个对象，同时也可以指向对象<br>
+所以指针本身是不是常量或者指针指向的是不是一个常量是两个相互独立的问题</p>
+</blockquote>
+<blockquote>
+<p><strong>用名词 顶层const（top-level const）表示指针本身是个常量（适用于任何对象）</strong><br>
+<strong>顶层const是放在<em>之后，指的是指针本身就是常量，不可以重定向(修改指针本身的值)，但是可以通过</em>p修改其指向的值</strong><br>
+<code>int *const p = &amp;a;</code>指针本身是常量所以定义时必须初始化</p>
+</blockquote>
+<blockquote>
+<p><strong>用名词 底层const（low-level const）表示指针所指向的对象是一个常量（与指针和引用等复合类型的基本类型部分有关）</strong><br>
+<strong>底层const是放在<em>之前，指的是指针所指向的对象是常量，可以重定向，但是不可以通过</em>p修改值</strong><br>
+<code>const int* p = &amp;a;</code>指针本身并非常量定义时可以不初始化<br>
+<strong>当然其等价于<code>int const* p = &amp;a</code></strong></p>
+</blockquote>
+<blockquote>
+<p>如果<em>前后都是const，则是顶底互用，不能重定向也不能通过</em>p修改值<br>
+<code>const int* const p = &amp;a;</code>  既具有顶层</p>
+</blockquote>
+<h2 id="%E7%BB%93%E6%9E%84%E4%BD%93">结构体</h2>
+<blockquote>
+<ul>
+<li><strong>一定要注意struct定义结构体的后花括号后是否有分号</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>struct结构体的内存大小具有自动补全的性质</strong></li>
+<li>原则1、数据成员对齐规则：结构（struct或联合union）的数据成员，第一个数据成员放在offset为0的地方，以后每个数据成员存储的起始位置要从该成员大小的整数倍开始（比如int在32位机为４字节，则要从4的整数倍地址开始存储）</li>
+<li>原则2、结构体作为成员：如果一个结构里有某些结构体成员，则结构体成员要从其内部最大元素大小的整数倍地址开始存储。（struct a里存有struct b，b里有char，int，double等元素，那b应该从8的整数倍开始存储。）</li>
+<li>原则3、收尾工作：结构体的总大小，也就是sizeof的结果，必须是其内部最大成员的整数倍，不足的要补齐<br>
+　所以我们可以知道如下结构体的内存大小为24B</li>
+<li><strong>Ｃ语言中定义结构体时不能给成员赋初值</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>重点</strong><br>
+<strong>Ｃ语言在全局变量处定义一个结构体的时候，如果未初始化，那么并不会进行实例化</strong><br>
+<strong>此时的结构体定义作用等于声明，并没有实际分配内存</strong><br>
+<strong>所以这个时候可以把结构体变量的定义放在结构体定义的前面</strong><br>
+{% highlight C++ %}<br>
+ex:
+#include &lt;stdio.h&gt;</li>
+</ul>
+</blockquote>
+<pre><code>struct stu a;  
+struct stu {  
+    int x, y;  
+};  
+
+int main() {  
+
+}  
+</code></pre>
+<p>{% endhighlight %}</p>
+<h2 id="%E5%85%B1%E7%94%A8%E4%BD%93">共用体</h2>
+<blockquote>
+<ul>
+<li>共用体所占内存大小是其成员所占内存大小的最大值<br>
+联合变量也可以在定义时直接初始化，但这个初始化只能对第一个成员进行<br>
+如果同时初始化多个成员，也只能用第一个值初始化第一个成员，并且会给出warning</li>
+</ul>
+</blockquote>
+<h2 id="%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B">枚举类型</h2>
+<p>{% highlight C++ %}
+enum DAY {<br>
+MON=1, TUE, WED, THU, FRI, SAT, SUN<br>
+};<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li>
+<ol>
+<li>枚举型是一个集合，集合中的元素(枚举成员)是一些命名的整型常量，元素之间用逗号,隔开</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>DAY是一个标识符，可以看成这个集合的名字，是一个可选项，即是可有可无的项。</li>
+<li>第一个枚举成员的默认值为整型的0，后续枚举成员的值在前一个成员上加1。</li>
+<li>可以人为设定枚举成员的值，从而自定义某个范围内的整数。</li>
+<li>枚举型是预处理指令#define的替代。</li>
+<li>类型定义以分号;结束。</li>
+<li>注意枚举类型中最后一个不需要加分号</li>
+</ol>
+</blockquote>
+<h2 id="%E5%AE%8F%E5%AE%9A%E4%B9%89">宏定义</h2>
+<blockquote>
+<ul>
+<li>下面代码中对Ａ的宏定义代表将Ａ定义成一个空白字符<br>
+那么在预处理阶段Ａ＋１会被替换成　＋１，最后得到的输出就是１</li>
+</ul>
+</blockquote>
+<p>{% highlight C++ %}<br>
+#include &lt;stdio.h&gt;</p>
+<p>#define A</p>
+<p>int main() {<br>
+printf(&quot;%d\n&quot;, A + 1);<br>
+return 0;<br>
+}<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li>需要注意一下宏定义的一些细节问题<br>
+<code>#define a b</code>是机械化地在预处理阶段将所有的a部分替换成b<br>
+一个很直观的例子就是<br>
+<code>#define a 3+5</code><br>
+那么<code>a/2</code>等价于<code>3+5/2</code> 应该是 <code>3+2=5</code></li>
+</ul>
+</blockquote>
+<h2 id="%E4%BD%8D%E6%AE%B5">位段</h2>
+<h4 id="%E5%A4%A7%E8%87%B4%E6%A6%82%E5%BF%B5">大致概念</h4>
+<blockquote>
+<ul>
+<li>位段是 C 语言特有的数据结构, 它允许我们定义一个由位组成的段, 并可为它赋以一个名字</li>
+</ul>
+</blockquote>
+<h4 id="%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F">基本形式</h4>
+<p>{% highlight C++ %}<br>
+#include &lt;stdio.h&gt;</p>
+<p>struct name {
+unsigned a : 1;
+unsigned b : 4;
+};</p>
+<p>int main() {
+printf(&quot;%d\n&quot;, sizeof(struct name));
+}
+{% endhighlight %}</p>
+<h4 id="%E6%B3%A8%E6%84%8F%E8%A6%81%E7%82%B9">注意要点</h4>
+<blockquote>
+<ul>
+<li><strong>位段成员的类型只能是unsigned int 或者 int类型</strong></li>
+<li><strong>长度为n的位段的取值范围为0~(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>)</strong></li>
+<li><strong>一个位段必须存储在同一个存储单元中(字节)，不能跨两个存储单元</strong><br>
+<strong>如果第一个存储空间不能容纳下一个位段，则该空间不用，而从下一个单元起存放该位段(int的一个存储空间是32位)</strong></li>
+<li><strong>可以定义无名位段，表示相应的空间不使用</strong><br>
+<strong>也可以定义长度为０的无名位段，表示下一个位段从下一个存储区间开始存放</strong><br>
+<strong>位段不可说明维数，也就是不能说明位段数组，例如<code>falg:l[2]</code></strong><br>
+<strong>不可以取位段地址，也意味着不存在位段指针</strong><br>
+<strong>位段成员的长度不能大于指定类型固有长度，比如说int的位域长度不能超过32，否则CE</strong>
+{% highlight C++ %}<br>
+struct packed_data {<br>
+unsigned a:2;
+unsigned b:4;
+unsigned :0; /* a、 b存储在同一个单元， c、 d另存在一个单元 <em>/
+unsigned c:3;
+unsigned :3; /</em> 这三位空间不用 */
+unsigned d:2;
+} data;
+{% endhighlight %}</li>
+</ul>
+</blockquote>
+<h2 id="switch%E7%9A%84%E7%94%A8%E6%B3%95">switch的用法</h2>
+<p>{% highlight C++ %}<br>
+switch (a) {
+case 1:
+printf(&quot;QAT&quot;);
+case 5:
+printf(&quot;TAT&quot;);
+default:
+printf(&quot;QWQ&quot;);
+}
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li>switch的大致形式如上,default并不是必须的<br>
+switch中的表达式只能为整型</li>
+<li>其中case后面所跟的值必须是整形常量,而不能使用变量(当然字符类型也是一种特殊的整型)</li>
+<li>同时注意到case的判断只是一个入口作用，程序会找到对应的入口进去，一直往下执行，直到结束或者遇到break，所以上述代码如果<code>a==1</code>那么最后会输出QAQTATQWQA</li>
+</ul>
+</blockquote>
+<h2 id="linux%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4">LINUX常见指令</h2>
+<p>编译　　　　　　　　　<strong>gcc hello.c -o hello</strong><br>
+执行　　　　　　　　　<strong>./hello</strong><br>
+返回上级目录　　　　　<strong>cd ..</strong><br>
+跳转下级目录　　　　　<strong>cd Desktop</strong><br>
+查看目录内容　　　　　<strong>ls</strong><br>
+先运行a程序，再运行b程序　　　　　　　　　　　　　　<strong>./a　&amp;&amp;　./b</strong><br>
+运行a程序并将其输出作为ｂ程序的输入运行ｂ程序　　　　<strong>./a | ./b</strong></p>
+<h2 id="%E6%9D%82%E8%AE%B2">杂讲</h2>
+<blockquote>
+<ul>
+<li><strong>float类型的值用printf(&quot;%d&quot;)打印，得到的是垃圾值</strong></li>
+<li><strong>int类型用printf(&quot;%f&quot;)打印，得到的是0.000000(注意保留几位小数)</strong></li>
+<li><strong>int类型如果用scanf(&quot;%f&quot;)输入，再按printf(&quot;%d&quot;)输出得到的是垃圾值，如果再按printf(&quot;%f&quot;)输出得到的是0.000000</strong></li>
+<li><strong>float类型如果使用scanf(&quot;%d&quot;)输入，再按照printf(&quot;%d&quot;)输出得到的是0.000000，如果再按printf(&quot;%d&quot;)输出得到的是１</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>unsigned int x = -5 使用printf(&quot;%d&quot;)打印，得到的是-5</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>sizeof()具有截断作用，一般情况下不会计算其中的值</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>函数的返回类型可以不写，只会warning，默认为int</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>指针大小由机器字长决定,32位机为32位，64位机为64位</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>++a + ++a</strong> <strong>一定要有空格，但仍然是未定义行为</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>getchar()的返回值是int</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>printf(&quot;%d %d&quot;,i,j,k);</code><br>
+<strong>参数多于控制符号时，只给warning，但正常输出前两个</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>printf(&quot;%d %d %d&quot;,i,j);</code><br>
+<strong>控制符号多给参数时，只给warning，最后输出的是垃圾值</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>scanf(&quot;%*d&quot;,&amp;a);</code><br>
+<strong>%后加了*的部分会被忽略，会进行读取，但是读取后不会赋值给参数变量</strong><br>
+例如<code>scanf(&quot;%*d %d&quot;,&amp;a,&amp;b);</code><br>
+如果输入３　５，这个时候3会被读取但是不会被赋值给a，然后５会正常被赋值给b
+最后的效果是a没有被输入赋值　b被赋值为５</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>printf(&quot;%*d&quot;,a);</code><strong>可以使用<em>后面的形参代替</em>，实现动态格式输出出</strong><br>
+　如下面的例子中　最后等价于printf(&quot;%10.3s&quot;,s);</li>
+</ul>
+</blockquote>
+<p>{% highlight C++ %}<br>
+ex:
+char *s = &quot;myworld&quot;;
+int i = 3;<br>
+printf(&quot;%10.*s&quot;,i,s);<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li><code>int ungetc(int ch, FILE* stream)</code><br>
+<strong>将字符ch退回到指定流中</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>exit(0)</code>　<strong>是正常退出并且返回0值</strong><br>
+<code>abort()</code>　<strong>强行异常退出，不会进行一些常规的消除操作等，返回值非０</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>[]<strong>优先级高于</strong>*</li>
+</ul>
+</blockquote>
+<p>{% highlight C++ %}<br>
+int **a[10] -&gt; int **[10] a<br>
+int (**a)[10] -&gt; int [10] **a<br>
+int *(*a)[10] -&gt; int *[10] *a<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li><strong>C语言中有个很小的容易被忽略的细节</strong>：<code>a[i]</code>　<strong>等价于</strong>　<code>i[a]</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>C语言中可以将一个　int　类型强行赋值给　int*　指针</strong><br>
+<strong>Ｃ++则禁止了这种行为</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>函数签名(signature)大致 就是把函数名字去掉以后剩下的东西（返回值、参数、调用方式等）</strong><br>
+<strong>用于表示区别函数</strong></li>
+</ul>
+</blockquote>
+<img src="http://thyrsi.com/t6/652/1546854430x2890174076.jpg" height="450" width="700">   
+<p><em>A or D（雾）</em></p>
+<blockquote>
+<ul>
+<li><strong>Ｃ使用static、extern等变量类型声明时，允许省略后面的type类型，只给ｗａｒｎｉｎｇ，默认为int</strong></li>
+<li><strong>Ｃ＋＋中则必须加上type类型名，不然会ｅｒｒｏｒ</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong><code>static　int x;</code></strong></li>
+<li><strong>不初始化也是随机值</strong></li>
+</ul>
+</blockquote>
+<p>{% highlight C++ %}<br>
+ex:<br>
+struct point {<br>
+int index;<br>
+double x, y;<br>
+};<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li><strong>常量在定义的时候必须初始化，否则ＣＥ</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>注意，数组名只在一定程度上等价于指针，但仍有区别</strong><br>
+例如如下代码中p的值虽然与q相等，但sizeof(q)得到的是指针的大小，而sizeof(p)得到的是整个数组的内存大小<br>
+需要注意的是,char* p = &quot;QAQAQAQAQAQAQAQAQAQ&quot;,这个时候的sizeof(p)仍然是指针的大小８<br>
+{% highlight C++ %}<br>
+ex:<br>
+#include &lt;stdio.h&gt;</li>
+</ul>
+</blockquote>
+<p>int main() {<br>
+int p[] = {1, 2, 3, 4};<br>
+int *q = p;<br>
+printf(&quot;%d %d\n&quot;, sizeof(p), sizeof(q));<br>
+}<br>
+{% endhighlight %}</p>
+<blockquote>
+<ul>
+<li><strong>对数组名取地址相关问题</strong>   ex:<code>int a[5];</code><br>
+其实a和 &amp;a结果都是数组的首地址，但他们的类型是不一样<br>
+a表示&amp;a[0],也即对数组首元素取地址，a+1表示首地址+sizeof(元素类型)<br>
+&amp;a虽然值为数组首元素地址，但类型为：类型 (*)[数组元素个数],所以&amp;a+1大小为：首地址+sizeof(a)<br>
+<strong>简单地说,a是一个指向数组首元素的指针，而&amp;a可以某种程度上理解为一个指向整个数组的指针(但实质上仍是首元素的地址)</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>形参的类型默认是auto，所以不能再给形参加上作用存储类型的声明</strong><br>
+例如<code>void work(auto int a);</code>会报错<br>
+auto,extern,static都不可以，但是可以使用register</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>对不同类型的指针作大小判断的时候，是直接比较内存地址的大小，但会给出warning.</strong><br>
+<strong>将A类型的变量地址赋值给指向b类型的指针时，会给出warning,但不会ＣＥ</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>printf(&quot;C programing %s\n&quot;,&quot;Class %s\n&quot;,&quot;WOW&quot;);</code><br>
+以上输出只会将第二个字符串嵌套到第一个中，而不会将第三个嵌套到第二个中<br>
+<strong>同时会给出warning,提示说多给了一个字符串参数，也就是忽略了第三个字符串</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>char *str = &quot;abc&quot;&quot;def&quot;;</code><br>
+以上赋值方法是可行的，会<strong>将两个字符串拼接在一起成为一个字符串</strong>并返回字符串的首地址给str</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>C语言中可以通过一个非底层指针来改变一个const常量的值，<strong>只会给出warning但仍可编译通过</strong><br>
+C++中则禁止了这种行为</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>对负数取模的时候只需要记住**任何情况下都满足<code>a=(a/b)*b+a%b**即可 例如</code>3%(-2)<code>先算出</code>3/(-2)==－1<code>,那么</code>3%(-2) == 3-(-1)*(-2) == 1```<br>
+注意一下取模运算只能出现在整数中，而不能涉及到浮点数</li>
+<li><strong>而对于除法，不管正负，算出值后去掉小数部分即可</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>有符号类型变量与无符号类型变量进行运算时，会自动转换为无符号类型比较</strong><br>
+　所以一个无符号的正整数和一个有符号的负整数比大小，最后会是无符号的复整数大<br>
+<strong>当然需要注意的是，浮点数的第一位固定是符号位，所以不存在无符号的浮点数</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/tsroad/article/details/49834261">关于Ｃ语言序列点和副作用</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>要注意没有<code>&amp;&amp;=</code>和<code>||=</code>这样的符合运算符</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>return语句能作为选择表达语句的表达式，也不能通过任何方式利用它的返回值</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>注意<code>+</code> <code>-</code>等运算符号先算左右哪边是取决于编译器实现的，而非一定从左往右算</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>float f = y + x /= x / y;</code>会ＣＥ报错<br>
+因为/=的优先级很低在+之后，那么上式等价于<code>float f = (y + x) /= (x / y)</code><br>
+y + x并非左值，所以会CE报错</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>注意<code>%= /= *=</code>的结合性是从右向左<br>
+所以<code>int z = x /= y %= 2;</code>先算的是<code>y%=2</code>得到0，然后发生除０错误</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>做题时候一定要注意<code>if</code>或者<code>for</code>以及<code>do...while</code>等语句后有没有分号</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>使用register声明变量不一定能够真的将变量存在寄存器中<br>
+不可以对register变量进行取地址操作了</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Ｃ语言预处理可以有编译器的特性<br>
+条件编译(Conditional Compilation)使Ｃ可以在不同平台上编译出可执行文件</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="ending"><strong>Ending</strong></h1>
+<hr>
+<hr>
+<hr>
+<hr>
+
+    </body>
+    </html>

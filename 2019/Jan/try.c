@@ -1,11 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 
-struct name {
-    unsigned p : 30;
-    unsigned a : 3;
-    unsigned b : 30;
-};
+char s[1000005];
+int ans[10];
+int l;
 
 int main() {
-    printf("%d\n",(int)sizeof(struct name));
+    while (fgets(s, 100000, stdin)) {
+        l = strlen(s);
+        memset(ans, 0, sizeof(ans));
+        for (int i = 0; i < l; i++)
+            if (s[i] <= '9' && s[i] >= '0')
+                ans[s[i] - '0']++;
+        for (int i = 0; i <= 9; i++)
+            if(ans[i])
+                printf("%d:%d\n", i, ans[i]);
+    }
+    return 0;
 }
