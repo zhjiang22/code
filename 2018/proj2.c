@@ -194,7 +194,7 @@ int myprintf(const char* format,...) {
 				for(int i = 0; i < l; i++)	putchar(pp[i]),++cnt;
 				if(min_width > l && out_format == 1) {
 					int sum = min_width - l;
-					while(sum--)	putchar('-'),++cnt;
+					while(sum--)	putchar(' '),++cnt;
 				}
 			}
 			else	if(format[cur] == 'f') {
@@ -260,8 +260,8 @@ int myprintf(const char* format,...) {
                     while(argv_num[p] >= 10)  argv_num[p] -= 10,argv_num[p - 1]++,p--;
                     for(int i = 1; i < coo; i++)    putchar(argv_num[i] + '0'),++cnt;
                     if(format[cur] == 'e')  putchar('e'),++cnt;
-                    else    putchar('E');
-                    putchar('+');
+                    else    putchar('E'), ++cnt;
+                    putchar('+'), ++cnt;
                     putchar('0' + (pos - 1) / 10);  putchar('0' + (pos - 1) % 10);  cnt += 2;
                 }
                 else {
@@ -275,14 +275,42 @@ int myprintf(const char* format,...) {
                     while(argv_int[p] >= 10)  argv_int[p] -= 10,argv_int[p - 1]++,p--;
                 }
             }
+			else 	if(format[cur] == 'g' || format[cur] == 'G') {
+				double k = va_arg(ap,double);
+                if(k < 0)   putchar('-'),++cnt,k = -k;
+				if(float_format == -1)	float_format = 5;
+				long long x = k;	double y = k - x;
+				int pos = 0;
+				while(x) {
+					argv_int[pos++] = x % 10;
+					x /= 10;
+				}
+				int sum = pos + float_format + 1;
+				if(sum < min_width && out_format == -1) {
+					int kk = min_width - sum;
+					while(kk--)	putchar(' '),++cnt;
+				}
+				for(int i = pos - 1; i >= 0; i--)	putchar(argv_int[i] + '0'),++cnt;
+				putchar('.'),++cnt;
+				for(int i = 1; i <= float_format; i++) {
+                    argv_int[i] = (int)((y + eps) * 10);
+					y = (y * 10 - (int)((y + eps) * 10));
+				}
+				if((y + eps) * 10 >= 5)	argv_int[float_format]++;
+                int cur = float_format;
+                while(argv_int[cur] >= 10) argv_int[cur] -= 10, argv_int[cur - 1]++, cur--;
+                for(int i = 1; i <= float_format; i++)  putchar(argv_int[i] + '0'), ++cnt;
+				if(sum < min_width && out_format == 1) {
+		        	int kk = min_width - sum;
+					while(kk--)	putchar(' '),++cnt;
+				}
+			}
             else	if(format[cur] == '%') {
-                putchar('%');
-                ++cnt;
+                putchar('%');	++cnt;
             }
         }
         else {
-            putchar(format[cur]);
-            ++cnt;
+            putchar(format[cur]);	++cnt;
         }
         working = out_format = min_width = float_format = long_format = -1;	
         cur++;
@@ -291,44 +319,42 @@ int myprintf(const char* format,...) {
 }
 
 int main() {
-        //    double k = 0.000000000001;
-       //     printf("%.13e\n",k);
-  //      printf("%.7e\n",k);
-        double k = 0.32;    int b = 3;
-        printf("%f %d %f",k,b,k);
-   //     myprintf("%.7e\n",k);
-    //    double k = 55555555555555;
-     //   myprintf("%e\n",k);
-    //    printf("%e\n",k);
-    //	char a[50] = "formatf";
-    //    printf("jkfdjlasfjdsa\n");
-    //    return 0;
-    //	myprintf("%s %14s",a,a);
-    //	int a = 5;
-    //	char b = 'a';
-    //	double c = 1.2345678, d = 3223.122345623;
-    //	myprintf("%d %-.5f %14f %c",a,c,d,b);
-    //	int a = 20, b = 30, n = -3221;
-    //	int c = 15, d = 240;
-    //	void *p = &c, *q = &d;
-    //	myprintf("%u %i\n", a, a+b);
-    //	printf("%u %i\n", a, a+b);
-    //	myprintf("%d %o %x %X\n",n,c,d,d);
-    //	printf("%d %o %x %X\n",n,c,d,d);
-    //	myprintf("%c %c %c %c\n",'a','b','c','d');
-    //	myprintf("%c %c %c %c\n",'a','b','c','d');
-    //	myprintf("%p %p\n",p,q);
-    //	printf("%p %p\n",p,q);
-    //	int a = 5;
-    //	int* p = &a;
-    //	myprintf("%16p\n", p);
-    //	printf("%16p\n", p);
-    //	char c = 'a', b = 'd';
-    //	myprintf("%-3c %6c\n",c,b);
-    //	printf("%-3c %6c\n",c,b);
-    //	int a = 5, b = 16;
-    //	int x = myprintf("%5.3d\n",a);
-    //	int y = printf("%5.3d\n",a);
-    //	myprintf("%d %d\n",x,y);
-    return 0;
+	//The first part - %d %i %o %x %X %u
+	int a1 = 5, a2 = 13, a3 = 66666666;
+	int k1 = myprintf("%d %i %-8o %3x %X %u \n", a1, a2, a3, a3, a2, a1);
+	int k2 = printf("%d %i %-8o %3x %X %u \n", a1, a2, a3, a3, a2, a1);
+	myprintf("%d\t%d\n", k1, k2);
+	printf("%d\t%d\n", k1, k2);
+
+	myprintf("\n\n");
+
+	//The second part - %f %e %E %g %G
+
+	double b1 = 1.52423, b2 = 2.3333, b3 = 9.99999, b4 = 66666.0;
+	myprintf("%.3f %5.2f %f %e %-10.4E %g\n", b1, b2, b3, b4, b2, b1);
+	printf("%.3f %5.2f %f %e %-10.4E %g\n", b1, b2, b3, b4, b2, b1);
+
+	myprintf("\n\n");
+
+	//The third part- %c %s
+	char c1 = 'a';
+	char s1[] = "SYSUSYSUSYSU";
+	k1 = myprintf("%c %s %-15s %20s\n", c1, s1, s1, s1);
+	k2 = printf("%c %s %-15s %20s\n", c1, s1, s1, s1);
+	myprintf("%d %d\n", k1, k2);
+
+	printf("\n\n");
+
+	//The fourth part － %p与%%
+	int *p1 = &a1;
+	char *p2 = &c1;
+	k1 = myprintf("%p %p %%\n", p1, p2);
+	k2 = printf("%p %p %%\n", p1, p2);
+	myprintf("%d\t%d\n", k1, k2);
+	printf("\n\n");
+
+	//The fifth part-转义字符
+	myprintf("abc\rbcd\tlll\v\\ppp\'\"\123\n");
+	printf("abc\rbcd\tlll\v\\ppp\'\"\123\n");
+	return 0;
 }
