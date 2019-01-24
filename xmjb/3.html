@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///C:\Users\72803\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.3.11\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:////home/jzh0918/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.11/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -215,72 +215,61 @@ code.language-yaml {
 
 <h1 class="mume-header" id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%8F%98%E9%87%8F">&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0E;&#x53D8;&#x91CF;</h1>
 
-<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<ul>
 <li><a href="#%E4%B8%80-%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">&#x4E00;. &#x8BFE;&#x7A0B;&#x5185;&#x5BB9;</a></li>
 <li><a href="#%E4%BA%8C-%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3">&#x4E8C;. &#x77E5;&#x8BC6;&#x8BB2;&#x89E3;</a>
 <ul>
-<li><a href="#1-c%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. C++&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</a><br>
-* <a href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></a><br>
-* <a href="#1-2-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. 2 <strong>C++&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></a><br>
-* <a href="#1-3-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4">1. 3 <strong>C++&#x8BED;&#x8A00;&#x4E2D;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;</strong></a></li>
-<li><a href="#2-c%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F">2. C++&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;</a><br>
-* <a href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F">2. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x53D8;&#x91CF;&#x548C;&#x5E38;&#x91CF;</strong></a><br>
-* <a href="#2-2-%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E">2. 2 <strong>&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;</strong></a><br>
-* <a href="#2-3-%E5%B8%B8%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E">2. 3 <strong>&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;</strong></a><br>
-* <a href="#2-4-%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99">2. 4 <strong>&#x53D8;&#x91CF;&#x540D;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;</strong></a><br>
-* <a href="#2-5-%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E8%B5%8B%E5%80%BC">2. 5 <strong>&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x8D4B;&#x503C;</strong></a></li>
-<li><a href="#3-%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2">3. &#x5B57;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;</a><br>
-* <a href="#3-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6-%E5%AD%97%E7%AC%A6%E4%B8%B2">3. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x5B57;&#x7B26;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#xFF1F;</strong></a><br>
-* <a href="#3-2-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F">3. 2 <strong>&#x5B57;&#x7B26;&#x53D8;&#x91CF;</strong></a><br>
-* <a href="#3-3-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6">3. 3 <strong>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</strong></a><br>
-* <a href="#3-4-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F%E4%B8%93%E5%B1%9E%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%96%B9%E6%B3%95">3. 4 <strong>&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x4E13;&#x5C5E;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x65B9;&#x6CD5;</strong></a></li>
-<li><a href="#4-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">4. &#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</a></li>
+<li><a href="#1-c%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</a><br>
+* <a href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.1</mn></mrow><annotation encoding="application/x-tex">1. 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span></span></span></span> &#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;</a><br>
+* <a href="#1-2-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.2</mn></mrow><annotation encoding="application/x-tex">1. 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">2</span></span></span></span> <code>C++</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;</a><br>
+* <a href="#1-3-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.3</mn></mrow><annotation encoding="application/x-tex">1. 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">3</span></span></span></span> <code>C++</code>&#x8BED;&#x8A00;&#x4E2D;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;</a></li>
+<li><a href="#2-c%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;</a><br>
+* <a href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.1</mn></mrow><annotation encoding="application/x-tex">2. 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">1</span></span></span></span> &#x4EC0;&#x4E48;&#x662F;&#x53D8;&#x91CF;&#x548C;&#x5E38;&#x91CF;</a><br>
+* <a href="#2-2-%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.2</mn></mrow><annotation encoding="application/x-tex">2. 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">2</span></span></span></span> &#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;</a><br>
+* <a href="#2-3-%E5%B8%B8%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.3</mn></mrow><annotation encoding="application/x-tex">2. 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">3</span></span></span></span> &#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;</a><br>
+* <a href="#2-4-%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.4</mn></mrow><annotation encoding="application/x-tex">2. 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">4</span></span></span></span> &#x53D8;&#x91CF;&#x540D;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;</a><br>
+* <a href="#2-5-%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E8%B5%8B%E5%80%BC"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.5</mn></mrow><annotation encoding="application/x-tex">2. 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">5</span></span></span></span> &#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x8D4B;&#x503C;</a></li>
 </ul>
 </li>
-<li><a href="#%E4%B8%89-%E7%BB%8F%E5%85%B8%E4%BE%8B%E9%A2%98">&#x4E09;. &#x7ECF;&#x5178;&#x4F8B;&#x9898;</a></li>
-<li><a href="#%E5%9B%9B-%E6%8F%90%E9%AB%98%E5%B7%A9%E5%9B%BA">&#x56DB;. &#x63D0;&#x9AD8;&#x5DE9;&#x56FA;</a></li>
 </ul>
 <hr>
 <h2 class="mume-header" id="%E4%B8%80-%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">&#x4E00;. &#x8BFE;&#x7A0B;&#x5185;&#x5BB9;</h2>
 
-<ol>
-<li>C++&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
-<li>C++&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#x4E0E;&#x53D8;&#x91CF;</li>
-<li>C++&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;</li>
-<li>C++&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</li>
-</ol>
-<hr>
+<h2><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#x4E0E;&#x53D8;&#x91CF;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.</mn></mrow><annotation encoding="application/x-tex">3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4.</mn></mrow><annotation encoding="application/x-tex">4.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h2>
 <h2 class="mume-header" id="%E4%BA%8C-%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3">&#x4E8C;. &#x77E5;&#x8BC6;&#x8BB2;&#x89E3;</h2>
 
-<h3 class="mume-header" id="1-c%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. C++&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<h3 class="mume-header" id="1-c%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
 
-<h5 class="mume-header" id="1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></h5>
+<h5 class="mume-header" id="1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.1</mn></mrow><annotation encoding="application/x-tex">1. 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span></span></span></span> &#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;</h5>
 
 <blockquote>
 <p>&#x6570;&#x636E;&#x6709;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x3001;&#x8FD0;&#x7B97;&#x7C7B;&#x578B;&#x4E09;&#x4E2A;&#x8981;&#x7D20;&#x3002;</p>
 </blockquote>
-<h5 class="mume-header" id="1-2-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">1. 2 <strong>C++&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong></h5>
+<h5 class="mume-header" id="1-2-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.2</mn></mrow><annotation encoding="application/x-tex">1. 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">2</span></span></span></span> <code>C++</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;</h5>
 
 <p><img src="http://i2.bvimg.com/673806/4feb5aa1b5325f0b.png" alt="Markdown"></p>
-<h5 class="mume-header" id="1-3-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4">1. 3 <strong>C++&#x8BED;&#x8A00;&#x4E2D;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;</strong></h5>
+<h5 class="mume-header" id="1-3-c%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.3</mn></mrow><annotation encoding="application/x-tex">1. 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">3</span></span></span></span> <code>C++</code>&#x8BED;&#x8A00;&#x4E2D;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;</h5>
 
 <p><img src="http://i2.bvimg.com/673806/dcdd01344dcec10e.png" alt="Markdown"></p>
 <blockquote>
-<p>&#x7531;&#x6B64;&#x53EF;&#x89C1;&#xFF0C;C++&#x5404;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x6EA2;&#x51FA;&#x7684;&#x53EF;&#x80FD;(&#x5373;&#x8D85;&#x51FA;&#x53D6;&#x503C;&#x8303;&#x56F4;)&#xFF0C;C++&#x7A0B;&#x5E8F;&#x4E2D;&#x51FA;&#x73B0;&#x8FD9;&#x7C7B;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x7F16;&#x8BD1;&#x548C;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5E76;&#x4E0D;&#x62A5;&#x9519;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x9700;&#x8981;&#x7279;&#x522B;&#x7EC6;&#x5FC3;&#xFF0C;&#x6CE8;&#x610F;&#x8303;&#x56F4;&#x68C0;&#x67E5;&#x3002;</p>
+<p>&#x7531;&#x6B64;&#x53EF;&#x89C1;&#xFF0C;<code>C++</code>&#x5404;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x73B0;&#x6570;&#x636E;&#x6EA2;&#x51FA;&#x7684;&#x53EF;&#x80FD;(&#x5373;&#x8D85;&#x51FA;&#x53D6;&#x503C;&#x8303;&#x56F4;)&#xFF0C;<code>C++</code>&#x7A0B;&#x5E8F;&#x4E2D;&#x51FA;&#x73B0;&#x8FD9;&#x7C7B;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x7F16;&#x8BD1;&#x548C;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5E76;&#x4E0D;&#x62A5;&#x9519;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x9700;&#x8981;&#x7279;&#x522B;&#x7EC6;&#x5FC3;&#xFF0C;&#x6CE8;&#x610F;&#x8303;&#x56F4;&#x68C0;&#x67E5;&#x3002;</p>
 </blockquote>
-<h3 class="mume-header" id="2-c%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F">2. C++&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;</h3>
+<h3 class="mume-header" id="2-c%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> <code>C++</code>&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;</h3>
 
 <p><strong>&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x91CF;&#x5206;&#x4E3A;&#x5E38;&#x91CF;&#x548C;&#x53D8;&#x91CF;</strong></p>
-<h5 class="mume-header" id="2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F">2. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x53D8;&#x91CF;&#x548C;&#x5E38;&#x91CF;</strong></h5>
+<h5 class="mume-header" id="2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%E5%92%8C%E5%B8%B8%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.1</mn></mrow><annotation encoding="application/x-tex">2. 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">1</span></span></span></span> &#x4EC0;&#x4E48;&#x662F;&#x53D8;&#x91CF;&#x548C;&#x5E38;&#x91CF;</h5>
 
 <blockquote>
 <p><strong>&#x53D8;&#x91CF;&#x662F;&#x6307;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5176;&#x503C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7684;&#x91CF;&#x3002;</strong><br>
 <strong>&#x5E38;&#x91CF;&#x662F;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5176;&#x503C;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x7684;&#x91CF;&#x3002;</strong></p>
 </blockquote>
-<h5 class="mume-header" id="2-2-%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E">2. 2 <strong>&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;</strong></h5>
+<h5 class="mume-header" id="2-2-%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.2</mn></mrow><annotation encoding="application/x-tex">2. 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">2</span></span></span></span> &#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;</h5>
 
 <blockquote>
-<p>C++ &#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
+<p><code>C++</code> &#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
 <code>&#x7C7B;&#x578B;&#x540D; &#x53D8;&#x91CF;&#x540D;1, &#x53D8;&#x91CF;&#x540D;2,&#x2026;, &#x53D8;&#x91CF;&#x540D;n;</code></p>
 </blockquote>
 <blockquote>
@@ -288,7 +277,7 @@ code.language-yaml {
 <code>int sum,total;</code><br>
 <code>double area;</code></p>
 </blockquote>
-<h5 class="mume-header" id="2-3-%E5%B8%B8%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E">2. 3 <strong>&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;</strong></h5>
+<h5 class="mume-header" id="2-3-%E5%B8%B8%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.3</mn></mrow><annotation encoding="application/x-tex">2. 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">3</span></span></span></span> &#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;</h5>
 
 <blockquote>
 <p>C++ &#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x5E38;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
@@ -303,55 +292,75 @@ ex:<br>
 <p>&#x4F7F;&#x7528;&#x7B26;&#x53F7;&#x5E38;&#x91CF;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x7A0B;&#x5E8F;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x589E;&#x5F3A;&#x7A0B;&#x5E8F;&#x7684;&#x8BFB;&#x6027;&#x3002;&#x4E3A;&#x4E86;&#x66F4;&#x6E05;&#x6670;&#x5730;&#x533A;&#x522B;&#x5E38;&#x91CF;&#x548C;&#x53D8;&#x91CF;&#xFF0C;<strong>&#x5E38;&#x91CF;&#x540D;&#x901A;&#x5E38;&#x7528;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x8868;&#x793A;&#x3002;</strong></p>
 </blockquote>
 <blockquote>
-<p>&#x5728; C++ &#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;<strong>&#x4F7F;&#x7528;&#x7684;&#x5404;&#x79CD;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;&#x90FD;&#x5E94;&#x201C;&#x5148;&#x58F0;&#x660E;&#xFF0C;&#x540E;&#x4F7F;&#x7528;&#x201D;&#x3002;</strong><br>
+<p>&#x5728; <code>C++</code> &#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;<strong>&#x4F7F;&#x7528;&#x7684;&#x5404;&#x79CD;&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;&#x90FD;&#x5E94;&#x201C;&#x5148;&#x58F0;&#x660E;&#xFF0C;&#x540E;&#x4F7F;&#x7528;&#x201D;&#x3002;</strong><br>
 <strong>&#x53D8;&#x91CF;&#x4E0E;&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x53C8;&#x4F1A;&#x6D89;&#x53CA;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x521D;&#x59CB;&#x503C;&#x548C;&#x4F5C;&#x7528;&#x57DF;&#x7B49;&#x3002;</strong></p>
 </blockquote>
-<h5 class="mume-header" id="2-4-%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99">2. 4 <strong>&#x53D8;&#x91CF;&#x540D;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;</strong></h5>
+<h5 class="mume-header" id="2-4-%E5%8F%98%E9%87%8F%E5%90%8D%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.4</mn></mrow><annotation encoding="application/x-tex">2. 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">4</span></span></span></span> &#x53D8;&#x91CF;&#x540D;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;</h5>
 
 <blockquote>
 <p>&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5E38;&#x91CF;&#x540D;&#x3001;&#x53D8;&#x91CF;&#x540D;&#x3001;&#x51FD;&#x6570;&#x540D;&#x7B49;&#x90FD;&#x79F0;&#x4E4B;&#x4E3A;<strong>&#x6807;&#x8BC6;&#x7B26;</strong>&#x3002;</p>
 </blockquote>
 <blockquote>
-<p>C++ &#x4E2D;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x547D;&#x540D;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;<br>
-1&#xFF09; <strong>&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x548C;&#x7CFB;&#x7EDF;&#x91CC;&#x7684;&#x5173;&#x952E;&#x5B57;&#x540C;&#x540D;&#x3002;</strong><br>
-2&#xFF09; <strong>&#x6807;&#x8BC6;&#x7B26;&#x53EA;&#x80FD;&#x5305;&#x62EC;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x201C;_&#x201D;&#xFF0C;&#x5E76;&#x4E14;&#x5F00;&#x5934;&#x53EA;&#x80FD;&#x662F;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x3002;</strong><br>
-3&#xFF09; &#x6807;&#x8BC6;&#x7B26;&#x5FC5;&#x987B;&#x5148;&#x5B9A;&#x4E49;&#x3001;&#x540E;&#x4F7F;&#x7528;&#x3002;<br>
-4&#xFF09; &#x5728;&#x540C;&#x4E00;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#xFF0C;&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x3002;<br>
-5&#xFF09; &#x6807;&#x8BC6;&#x7B26;&#x662F;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#xFF0C;&#x5982; A &#x548C; a&#x3001;sum &#x548C; Sum &#x90FD;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;<br>
-6&#xFF09;&#x6807;&#x8BC6;&#x7B26;&#x8981;&#x5C3D;&#x91CF;&#x505A;&#x5230;&#x201C;&#x89C1;&#x540D;&#x77E5;&#x4E49;&#x201D;&#xFF0C;&#x589E;&#x5F3A;&#x7A0B;&#x5E8F;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
+<p><code>C++</code> &#x4E2D;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x547D;&#x540D;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> <strong>&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x548C;&#x7CFB;&#x7EDF;&#x91CC;&#x7684;&#x5173;&#x952E;&#x5B57;&#x540C;&#x540D;&#x3002;</strong><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span> <strong>&#x6807;&#x8BC6;&#x7B26;&#x53EA;&#x80FD;&#x5305;&#x62EC;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;<code>&#x201C;_&#x201D;</code>&#xFF0C;&#x5E76;&#x4E14;&#x5F00;&#x5934;&#x53EA;&#x80FD;&#x662F;&#x5B57;&#x6BCD;&#x6216;&#x4E0B;&#x5212;&#x7EBF;&#x3002;</strong><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span></span></span></span> &#x6807;&#x8BC6;&#x7B26;&#x5FC5;&#x987B;&#x5148;&#x5B9A;&#x4E49;&#x3001;&#x540E;&#x4F7F;&#x7528;&#x3002;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(4)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">4</span><span class="mclose">)</span></span></span></span> &#x5728;&#x540C;&#x4E00;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#xFF0C;&#x6807;&#x8BC6;&#x7B26;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x3002;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>5</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(5)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">5</span><span class="mclose">)</span></span></span></span> &#x6807;&#x8BC6;&#x7B26;&#x662F;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#xFF0C;&#x5982;<code>A</code> &#x548C; <code>a</code>&#x3001;<code>sum</code> &#x548C; <code>Sum</code> &#x90FD;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>6</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(6)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">6</span><span class="mclose">)</span></span></span></span> &#x6807;&#x8BC6;&#x7B26;&#x8981;&#x5C3D;&#x91CF;&#x505A;&#x5230;&#x201C;&#x89C1;&#x540D;&#x77E5;&#x4E49;&#x201D;&#xFF0C;&#x589E;&#x5F3A;&#x7A0B;&#x5E8F;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
 </blockquote>
 <blockquote>
-<p>&#x7EC3;&#x4E60;&#xFF1A;&#x627E;&#x51FA;&#x4E0B;&#x9762;&#x7B26;&#x5408;C++&#x89C4;&#x5219;&#x7684;&#x6807;&#x8BC6;&#x7B26;<br>
+<p>&#x7EC3;&#x4E60;&#xFF1A;&#x627E;&#x51FA;&#x4E0B;&#x9762;&#x7B26;&#x5408;<code>C++</code>&#x89C4;&#x5219;&#x7684;&#x6807;&#x8BC6;&#x7B26;<br>
 <code>Mr.Wang&#xFF0C;sum&#xFF0C;Day&#xFF0C;school_name&#xFF0C;a&gt;=b&#xFF0C;&#xFFE5;1234</code><br>
 <code>lotus_1_2&#xFF0C;sum123_&#xFF0C;_day&#xFF0C;234NUM&#xFF0C;#34&#xFF0C;int</code></p>
 </blockquote>
 <blockquote>
-<p>&#x7B26;&#x5408;C++&#x89C4;&#x5219;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x6709;&#xFF1A;<br>
+<p>&#x7B26;&#x5408;<code>C++</code>&#x89C4;&#x5219;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x6709;&#xFF1A;<br>
 <code>sum&#xFF0C;Day&#xFF0C;school_name&#xFF0C;lotus_1_2&#xFF0C;sum123_&#xFF0C;_day&#x3002;</code></p>
 </blockquote>
-<h5 class="mume-header" id="2-5-%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E8%B5%8B%E5%80%BC">2. 5 <strong>&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x8D4B;&#x503C;</strong></h5>
+<h5 class="mume-header" id="2-5-%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E8%B5%8B%E5%80%BC"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.5</mn></mrow><annotation encoding="application/x-tex">2. 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">5</span></span></span></span> &#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x8D4B;&#x503C;</h5>
 
 <blockquote>
 <p><strong>&#x53D8;&#x91CF;&#x5728;&#x5B9A;&#x4E49;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x5B83;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;</strong>&#xFF0C;&#x79F0;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x5316;&#x3002;<br>
-&#x5728; C++ &#x4E2D;&#xFF0C;<strong>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;&#x8D4B;&#x503C;&#x201D;&#x8BED;&#x53E5;&#x6765;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x7684;&#x503C;</strong>&#x3002;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
-&#x53D8;&#x91CF;&#x540D; = &#x503C;&#x6216;&#x8005;&#x8868;&#x8FBE;&#x5F0F; ;<br>
-&#x5176;&#x4E2D;&#xFF0C;&#x201C;=&#x201D;&#x79F0;&#x4E3A;&#x201C;&#x8D4B;&#x503C;&#x53F7;&#x201D;&#x3002;<br>
-ex:<br>
+&#x5728; <code>C++</code> &#x4E2D;&#xFF0C;<strong>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;&#x8D4B;&#x503C;&#x201D;&#x8BED;&#x53E5;&#x6765;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x7684;&#x503C;</strong>&#x3002;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
+<code>&#x53D8;&#x91CF;&#x540D; = &#x503C;&#x6216;&#x8005;&#x8868;&#x8FBE;&#x5F0F;</code> ;</p>
+</blockquote>
+<blockquote>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x201C;=&#x201D;&#x79F0;&#x4E3A;&#x201C;&#x8D4B;&#x503C;&#x53F7;&#x201D;&#x3002;</p>
+</blockquote>
+<blockquote>
+<p>ex:<br>
 <code>a = 5;</code></p>
 </blockquote>
-<h3 class="mume-header" id="3-%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2">3. &#x5B57;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;</h3>
+<h5 class="mume-header" id="2-6-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.6</mn></mrow><annotation encoding="application/x-tex">2. 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">6</span></span></span></span> &#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;</h5>
 
-<h5 class="mume-header" id="3-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6-%E5%AD%97%E7%AC%A6%E4%B8%B2">3. 1 <strong>&#x4EC0;&#x4E48;&#x662F;&#x5B57;&#x7B26;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#xFF1F;</strong></h5>
+<blockquote>
+<ul>
+<li>&#x653E;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5916;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x53EB;&#x505A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x5728;&#x58F0;&#x660E;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x51FD;&#x6570;&#x5185;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x672A;&#x8D4B;&#x521D;&#x503C;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>&#x3002;</li>
+<li>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x6548;&#x679C;&#x4E00;&#x76F4;&#x5230;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x4E3A;&#x6B62;&#x3002;</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>&#x653E;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x53EB;&#x505A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x5728;&#x58F0;&#x660E;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x53EA;&#x53EF;&#x4EE5;&#x5728;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x5185;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x672A;&#x8D4B;&#x521D;&#x503C;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;&#x968F;&#x673A;&#x503C;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x6548;&#x679C;&#x968F;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x7684;&#x7ED3;&#x675F;&#x800C;&#x7ED3;&#x675F;&#x3002;</li>
+</ul>
+</blockquote>
+<h3 class="mume-header" id="3-%E5%AD%97%E7%AC%A6%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.</mn></mrow><annotation encoding="application/x-tex">3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span></span></span></span> &#x5B57;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;</h3>
+
+<h5 class="mume-header" id="3-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E7%AC%A6-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.1</mn></mrow><annotation encoding="application/x-tex">3. 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">1</span></span></span></span> &#x4EC0;&#x4E48;&#x662F;&#x5B57;&#x7B26;&#x3001;&#x5B57;&#x7B26;&#x4E32;</h5>
 
 <blockquote>
 <p><strong>&#x5B58;&#x653E;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x79F0;&#x4E3A;&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x3002;</strong><br>
-&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x662F;&#x7528;&#x4E00;&#x5BF9;&#x5355;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5982;&#x2018;a&#x2019; &#x548C;&#x2018;&#xFF1F;&#x2019;&#x7B49;&#x3002;</p>
+&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x662F;&#x7528;&#x4E00;&#x5BF9;&#x5355;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5982;<code>&#x2018;a&#x2019;</code> &#x548C;<code>&#x2018;&#xFF1F;&#x2019;</code>&#x7B49;&#x3002;</p>
 </blockquote>
 <blockquote>
-<p>&#x5B58;&#x653E;&#x4E00;&#x4E32;&#x6709;&#x82E5;&#x5E72;&#x5B57;&#x7B26;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x79F0;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x662F;&#x7528;&#x4E00;&#x5BF9;&#x53CC;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;&#x5982;&#x201C;Good Morning! &#x201D; &#x548C;&#x201C;a&#x201D; &#x7B49;&#x3002;<br>
+<p>&#x5B58;&#x653E;&#x4E00;&#x4E32;&#x6709;&#x82E5;&#x5E72;&#x5B57;&#x7B26;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x79F0;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x662F;&#x7528;&#x4E00;&#x5BF9;&#x53CC;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;&#x5982;<code>&#x201C;Good Morning! &#x201D;</code> &#x548C;<code>&#x201C;a&#x201D;</code> &#x7B49;&#x3002;<br>
 &#x5982;&#x679C;&#x53CC;&#x5F15;&#x53F7;&#x5185;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x79F0;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E0E;&#x53CC;&#x5F15;&#x53F7;&#x5185;&#x6709;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
 </blockquote>
-<h5 class="mume-header" id="3-2-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F">3. 2 <strong>&#x5B57;&#x7B26;&#x53D8;&#x91CF;</strong></h5>
+<h5 class="mume-header" id="3-2-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.2</mn></mrow><annotation encoding="application/x-tex">3. 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">2</span></span></span></span> &#x5B57;&#x7B26;&#x53D8;&#x91CF;</h5>
 
 <blockquote>
 <p>&#x5B9A;&#x4E49;&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<br>
@@ -359,22 +368,22 @@ ex:<br>
 <strong>&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5360;&#x7528; 1 &#x4E2A;&#x5B57;&#x8282;&#x3002;</strong></p>
 </blockquote>
 <blockquote>
-<p>&#x5728; C++ &#x4E2D;&#xFF0C;&#x5B57;&#x7B26;&#x6570;&#x636E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5B9E;&#x9645;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5176; ASCII &#x7801;&#x503C;&#x3002;<br>
+<p>&#x5728; <code>C++</code> &#x4E2D;&#xFF0C;&#x5B57;&#x7B26;&#x6570;&#x636E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5B9E;&#x9645;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5176; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>S</mi><mi>C</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">ASCII</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span> &#x7801;&#x503C;&#x3002;<br>
 &#x6240;&#x4EE5;&#xFF0C;&#x4ECE;&#x672C;&#x8D28;&#x4E0A;&#x8BF4;&#xFF0C;<strong>&#x5B57;&#x7B26;&#x6570;&#x636E;&#x4E0E;&#x6574;&#x6570;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x5B8C;&#x5168;&#x76F8;&#x540C;</strong></p>
 </blockquote>
 <blockquote>
-<p><strong>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>(int)a</code>&#x5C06;&#x4E00;&#x4E2A;char&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;int&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;</strong><br>
-<strong>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>(char)b</code>&#x5C06;&#x4E00;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;char&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x53D8;&#x91CF;</strong></p>
+<p><strong>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>(int)a</code>&#x5C06;&#x4E00;&#x4E2A;<code>char</code>&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;</strong><br>
+<strong>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>(char)b</code>&#x5C06;&#x4E00;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6574;&#x6570;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;<code>char</code>&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x53D8;&#x91CF;</strong></p>
 </blockquote>
-<h5 class="mume-header" id="3-3-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6">3. 3 <strong>&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</strong></h5>
+<h5 class="mume-header" id="3-3-%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.3</mn></mrow><annotation encoding="application/x-tex">3. 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">3</span></span></span></span> &#x8F6C;&#x4E49;&#x5B57;&#x7B26;</h5>
 
 <blockquote>
-<p>C++ &#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x524D;&#x52A0;&#x201C;\&#x201D;&#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x79F0;&#x4E3A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</p>
+<p><code>C++</code> &#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x524D;&#x52A0;<code>&#x201C;\&#x201D;</code>&#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x79F0;&#x4E3A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;</p>
 </blockquote>
 <p><img src="http://i2.bvimg.com/673806/e2447da7c0c4acae.png" alt="Markdown"></p>
-<h5 class="mume-header" id="3-4-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F%E4%B8%93%E5%B1%9E%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%96%B9%E6%B3%95">3. 4 <strong>&#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x4E13;&#x5C5E;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x65B9;&#x6CD5;</strong></h5>
+<h5 class="mume-header" id="3-4-%E5%AD%97%E7%AC%A6%E5%8F%98%E9%87%8F%E4%B8%93%E5%B1%9E%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%96%B9%E6%B3%95"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.4</mn></mrow><annotation encoding="application/x-tex">3. 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">4</span></span></span></span> &#x5B57;&#x7B26;&#x53D8;&#x91CF;&#x4E13;&#x5C5E;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x65B9;&#x6CD5;</h5>
 
-<p><strong>getchar()&#x51FD;&#x6570;</strong></p>
+<p><strong><code>getchar()</code>&#x51FD;&#x6570;</strong></p>
 <blockquote>
 <p><code>getchar&#xFF08;&#xFF09;;</code><br>
 &#x7528;&#x4E8E;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x53D8;&#x91CF;</p>
@@ -384,7 +393,7 @@ ex:<br>
 <code>char ch;</code><br>
 <code>ch = getchar();</code></p>
 </blockquote>
-<p><strong>putchar()&#x51FD;&#x6570;</strong></p>
+<p><strong><code>putchar()</code>&#x51FD;&#x6570;</strong></p>
 <blockquote>
 <p><code>putchar&#xFF08;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#xFF09;;</code><br>
 &#x7528;&#x4E8E;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x53D8;&#x91CF;</p>
@@ -394,28 +403,27 @@ ex:<br>
 <code>char ch = &apos;a&apos;;</code><br>
 <code>putchar(a);</code></p>
 </blockquote>
-<h3 class="mume-header" id="4-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">4. &#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
+<h3 class="mume-header" id="4-%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4.</mn></mrow><annotation encoding="application/x-tex">4.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span></span></span></span> &#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h3>
 
 <blockquote>
-<p>&#x5728; C++ &#x4E2D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x201C;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x201D;,&#x5C06;&#x67D0;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;<br>
+<p>&#x5728; <code>C++</code> &#x4E2D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x201C;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x201D;,&#x5C06;&#x67D0;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;<br>
 &#x683C;&#x5F0F;&#x4E3A;&#xFF1A;<br>
 <code>( &#x7C7B;&#x578B;&#x540D; )( &#x8868;&#x8FBE;&#x5F0F; )</code><br>
 <code>( &#x7C7B;&#x578B;&#x540D; ) &#x53D8;&#x91CF;</code></p>
 </blockquote>
 <blockquote>
-<p>ex:<br>
-<code>(double)a //&#x5C06;a&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;double&#x578B;</code><br>
-<code>(int)(x + y) //&#x5C06;x+y&#x7684;&#x503C;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;int&#x578B;</code><br>
-<code>(float)(4 % 3) //&#x5C06;4%3&#x7684;&#x503C;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;float&#x578B;</code></p>
+<p>ex:</p>
 </blockquote>
-<hr>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp">    <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span>a         <span class="token comment">//&#x5C06;a&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;double&#x578B;</span>
+    <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>x <span class="token operator">+</span> y<span class="token punctuation">)</span>       <span class="token comment">//&#x5C06;x+y&#x7684;&#x503C;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;int&#x578B;</span>
+    <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">%</span> <span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment">//&#x5C06;4%3&#x7684;&#x503C;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x6210;float&#x578B;</span>
+</pre><hr>
 <h2 class="mume-header" id="%E4%B8%89-%E7%BB%8F%E5%85%B8%E4%BE%8B%E9%A2%98">&#x4E09;. &#x7ECF;&#x5178;&#x4F8B;&#x9898;</h2>
 
-<ol>
-<li>&#x9605;&#x8BFB;&#x5E76;&#x4E0A;&#x673A;&#x8C03;&#x8BD5;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x9884;&#x6D4B;&#x3001;&#x89C2;&#x5BDF;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</li>
-</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> &#x9605;&#x8BFB;&#x5E76;&#x4E0A;&#x673A;&#x8C03;&#x8BD5;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x9884;&#x6D4B;&#x3001;&#x89C2;&#x5BDF;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
 <pre data-role="codeBlock" data-info="C++" class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">;</span>
     <span class="token keyword">double</span> d<span class="token punctuation">,</span>e<span class="token punctuation">;</span>
@@ -430,6 +438,7 @@ ex:<br>
 
 </pre><pre data-role="codeBlock" data-info="C++" class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">2147483647</span><span class="token punctuation">;</span>
     a <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
@@ -438,6 +447,7 @@ ex:<br>
 <span class="token punctuation">}</span>
 </pre><pre data-role="codeBlock" data-info="C++" class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
     <span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token string">&apos;A&apos;</span><span class="token punctuation">;</span>
@@ -445,9 +455,7 @@ ex:<br>
     cout <span class="token operator">&lt;&lt;</span> ch <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span> <span class="token operator">&lt;&lt;</span> <span class="token keyword">int</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">&quot; &quot;</span> <span class="token operator">&lt;&lt;</span> b <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</pre><ol start="2">
-<li>&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x51FA;&#x5B83;&#x7684;ASCII&#x7801;&#x503C;</li>
-</ol>
+</pre><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> &#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x51FA;&#x5B83;&#x7684;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>S</mi><mi>C</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">ASCII</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span>&#x7801;&#x503C;</p>
 <table>
 <thead>
 <tr>
@@ -466,9 +474,7 @@ ex:<br>
 </tr>
 </tbody>
 </table>
-<ol start="3">
-<li>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x53D8;&#x91CF;a,b&#xFF0C;&#x5E76;&#x8BFB;&#x53D6;&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8F93;&#x51FA;a/b&#x7684;&#x503C;</li>
-</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.</mn></mrow><annotation encoding="application/x-tex">3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span></span></span></span> &#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x53D8;&#x91CF;<code>a,b</code>&#xFF0C;&#x5E76;&#x8BFB;&#x53D6;&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x8F93;&#x51FA;<code>a/b</code>&#x7684;&#x503C;</p>
 <table>
 <thead>
 <tr>
@@ -490,9 +496,7 @@ ex:<br>
 <hr>
 <h2 class="mume-header" id="%E5%9B%9B-%E6%8F%90%E9%AB%98%E5%B7%A9%E5%9B%BA">&#x56DB;. &#x63D0;&#x9AD8;&#x5DE9;&#x56FA;</h2>
 
-<ol>
-<li>&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x8F93;&#x51FA;&#x8BE5;&#x6570;&#x5B57;ASCII&#x7801;&#x503C;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x5165;&#x4FDD;&#x8BC1;&#x6709;&#x6548;&#x3002;</li>
-</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> &#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x8F93;&#x51FA;&#x8BE5;&#x6570;&#x5B57;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>S</mi><mi>C</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">ASCII</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span>&#x7801;&#x503C;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x5165;&#x4FDD;&#x8BC1;&#x6709;&#x6548;&#x3002;</p>
 <table>
 <thead>
 <tr>
@@ -511,9 +515,7 @@ ex:<br>
 </tr>
 </tbody>
 </table>
-<ol start="2">
-<li>&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x51FA;&#x8FD9;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x5728;&#x5B57;&#x6BCD;&#x8868;&#x4E2D;&#x540E;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x5B57;&#x6BCD;</li>
-</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> &#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#xFF0C;&#x8F93;&#x51FA;&#x8FD9;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x5728;&#x5B57;&#x6BCD;&#x8868;&#x4E2D;&#x540E;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x5B57;&#x6BCD;</p>
 <table>
 <thead>
 <tr>
@@ -532,9 +534,7 @@ ex:<br>
 </tr>
 </tbody>
 </table>
-<ol start="3">
-<li>&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x7B49;&#x8170;&#x68AF;&#x5F62;&#x7684;&#x4E0A;&#x5E95;&#x3001;&#x4E0B;&#x5E95;&#x3001;&#x9AD8;&#xFF0C;&#x8F93;&#x51FA;&#x5B83;&#x7684;&#x9762;&#x79EF;(&#x6709;&#x53EF;&#x80FD;&#x4E3A;&#x5C0F;&#x6570;)</li>
-</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.</mn></mrow><annotation encoding="application/x-tex">3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span></span></span></span> &#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x7B49;&#x8170;&#x68AF;&#x5F62;&#x7684;&#x4E0A;&#x5E95;&#x3001;&#x4E0B;&#x5E95;&#x3001;&#x9AD8;&#xFF0C;&#x8F93;&#x51FA;&#x5B83;&#x7684;&#x9762;&#x79EF;(&#x6709;&#x53EF;&#x80FD;&#x4E3A;&#x5C0F;&#x6570;)</p>
 <table>
 <thead>
 <tr>

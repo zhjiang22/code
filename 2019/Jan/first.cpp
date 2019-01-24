@@ -1,16 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int k;
-
 int main() {
     int n;
-    int a[10000];
-    for (int i = 1; i <= n; i++) {
-        for (int j = i + 1; j <= n; j++) {
-            if(a[i] > a[j])
-                swap(a[i], a[j]);
-        }
-    }
+    int x;
+    int a[10005];
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    cin >> x;
+    for (int i = n; i >= x; i--)
+        a[i + 1] = a[i];
+    a[x] = a[n + 1];
+    for (int i = 1; i <= n; i++)
+        cout << a[i] << ' ';
+    cout << endl;
     return 0;
 }
