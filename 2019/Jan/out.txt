@@ -1,14 +1,8 @@
-The edges we choose:
-12 3 4.538
-6 8 4.965
-12 4 6.18
-9 10 7.39
-2 3 10.88
-2 10 12.264
-4 7 13.343
-10 11 14.096
-1 11 18.804
-7 8 20.256
-5 6 27.853
-The ans:
-140.569
+The name: PowderHan's restaurant
+The type: 1
+The number: 0
+The restaurant is working now
+The number: 5
+The number: 9
+The number: 13
+The number: 0
