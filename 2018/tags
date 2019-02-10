@@ -1,0 +1,11 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+eps	proj2.c	/^double eps = 1e-9;$/;"	v
+main	proj2.c	/^int main() {$/;"	f
+myprintf	proj2.c	/^int myprintf(const char* format,...) {$/;"	f
+print_long	proj2.c	/^int print_long(int out_fmt,int signd, int width, int precision, int pas,int xorX, int x) {$/;"	f
+print_short	proj2.c	/^int print_short(int out_fmt,int signd, int width, int precision, int pas,int xorX, int p) {$/;"	f

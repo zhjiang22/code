@@ -1,0 +1,105 @@
+	PowderHan.vim	/^nnoremap  h  $/;"	m
+	PowderHan.vim	/^nnoremap  k$/;"	m
+	PowderHan.vim	/^nnoremap  l  $/;"	m
+	PowderHan.vim	/^inoremap  u$/;"	m
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0	PowderHan.vim	/^normal! 0$/;"	m
+02|	PowderHan.vim	/^normal! 02|$/;"	m
+03|	PowderHan.vim	/^normal! 03|$/;"	m
+<F12>	PowderHan.vim	/^map <F12> :call Clss()$/;"	m
+<F4>	PowderHan.vim	/^map <F4> :call Mul()$/;"	m
+<F5>	PowderHan.vim	/^map <F5> :call CompileRunGcc()$/;"	m
+<F6>	PowderHan.vim	/^map <F6> :call CompileGcc()$/;"	m
+<F7>	PowderHan.vim	/^map <F7> :call RunGcc()$/;"	m
+<F8>	PowderHan.vim	/^map <F8> :call Term()$/;"	m
+<F9>	PowderHan.vim	/^map <F9> :call GDB()$/;"	m
+<NL>	PowderHan.vim	/^nnoremap <NL> j  $/;"	m
+<Plug>NetrwBrowseX	PowderHan.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())$/;"	m
+<Plug>NetrwBrowseXVis	PowderHan.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
+CFLAGS	makefile	/^CFLAGS= -g -std=c++11 -Wall$/;"	m
+LDLIBS	makefile	/^LDLIBS= -lm$/;"	m
+MAXN	2-2-1.cpp	/^const int MAXN = 100005;$/;"	v
+Q	PowderHan.vim	/^map Q gq$/;"	m
+SessionLoad	PowderHan.vim	/^let SessionLoad = 1$/;"	v
+Solution	2-9-1.cpp	/^class Solution {$/;"	c	file:
+Solution	2-9-2.cpp	/^class Solution {$/;"	c	file:
+Solution	2-9-3.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode1.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode121.py	/^class Solution:$/;"	c
+Solution	leetcode2.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode21.py	/^class Solution:$/;"	c
+Solution	leetcode90.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode989.cpp	/^class Solution {$/;"	c	file:
+a	2-2-1.cpp	/^int a[MAXN];$/;"	v
+a	2-5-2.cpp	/^int a[10005];$/;"	v
+a	2-6-1.py	/^a = input()$/;"	v
+a	CF1104B.py	/^a = []$/;"	v
+a	Reservoir.py	/^a = []$/;"	v
+a	luogu1071.py	/^a = input().rstrip()$/;"	v
+addToArrayForm	leetcode989.cpp	/^    vector<int> addToArrayForm(vector<int>& A, int K) {$/;"	f	class:Solution
+addTwoNumbers	leetcode2.cpp	/^    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {$/;"	f	class:Solution
+ans	2-9-3.cpp	/^        ans = min(ans, g[src][dst][i]);$/;"	m	class:Solution	file:
+ans	2-9-3.cpp	/^    if (ans == INF)    ans = -1;$/;"	m	class:Solution	file:
+ans	2-9-3.cpp	/^    int ans = INF;$/;"	m	class:Solution	file:
+ans	CF1104B.py	/^ans = 0$/;"	v
+b	2-6-1.py	/^b = input()$/;"	v
+b	luogu1071.py	/^b = input().rstrip()$/;"	v
+c	luogu1071.py	/^c = input().rstrip()$/;"	v
+check	luogu1125.py	/^def check(n):$/;"	f
+cur	CF1104B.py	/^        cur = a.pop()$/;"	v
+dfs	leetcode90.cpp	/^    void dfs(int cur, vector<vector<int> > &ans, vector<int> a, int n) {$/;"	f	class:Solution
+f	2-2-1.cpp	/^int f[MAXN][2];$/;"	v
+findCheapestPrice	2-9-3.cpp	/^    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {$/;"	f	class:Solution
+gx	PowderHan.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
+gx	PowderHan.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
+init	2-2-1.cpp	/^void init() {$/;"	f
+j	Reservoir.py	/^    j = random.randint(1, i)$/;"	v
+jj	PowderHan.vim	/^inoremap jj $/;"	m
+k	Reservoir.py	/^k = int(input())$/;"	v
+main	2-2-1.cpp	/^int main() {$/;"	f
+main	2-5-2.cpp	/^int main() {$/;"	f
+main	2-9-1.cpp	/^int main() {$/;"	f
+main	2-9-2.cpp	/^int main() {$/;"	f
+main	2-9-3.cpp	/^int main() {$/;"	f
+main	try.cpp	/^int main() {$/;"	f
+main	ttt/i.cpp	/^int main() {$/;"	f
+maxProfit	leetcode121.py	/^    def maxProfit(self, prices):$/;"	m	class:Solution
+maxans	luogu1125.py	/^maxans = 0$/;"	v
+mergeTwoLists	leetcode21.py	/^    def mergeTwoLists(self, l1, l2):$/;"	m	class:Solution
+minans	luogu1125.py	/^minans = 10000$/;"	v
+n	2-2-1.cpp	/^int n;$/;"	v
+n	2-5-2.cpp	/^int n;$/;"	v
+n	2-6-1.py	/^n = len(a)$/;"	v
+n	CF1104A.py	/^n = int(input())$/;"	v
+n	CF1104B.py	/^n = len(s)$/;"	v
+n	luogu1012.py	/^n = int(input())$/;"	v
+n	luogu1071.py	/^n = len(a)$/;"	v
+now	leetcode90.cpp	/^    vector<int> now;$/;"	m	class:Solution	file:
+numSubarraysWithSum	2-9-2.cpp	/^    int numSubarraysWithSum(vector<int>& A, int S) {$/;"	f	class:Solution
+numUniqueEmails	2-9-1.cpp	/^    int numUniqueEmails(vector<string>& emails) {$/;"	f	class:Solution
+ok	2-6-1.py	/^def ok(c):$/;"	f
+powderhan	2-9-2.cpp	/^}powderhan;$/;"	v	typeref:class:Solution
+ppp	2-9-1.cpp	/^}ppp;$/;"	v	typeref:class:Solution
+s	CF1104B.py	/^s = input()$/;"	v
+s	luogu1071.py	/^s = {}$/;"	v
+s	luogu1125.py	/^s = input()$/;"	v
+s2	luogu1071.py	/^s2 = {}$/;"	v
+s:cpo_save	PowderHan.vim	/^let s:cpo_save=&cpo$/;"	v
+s:l	PowderHan.vim	/^let s:l = 1 - ((0 * winheight(0) + 11) \/ 23)$/;"	v
+s:l	PowderHan.vim	/^let s:l = 1 - ((0 * winheight(0) + 13) \/ 26)$/;"	v
+s:l	PowderHan.vim	/^let s:l = 14 - ((13 * winheight(0) + 25) \/ 50)$/;"	v
+s:so_save	PowderHan.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	PowderHan.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	PowderHan.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+slist	luogu1012.py	/^slist = list(map(str, input().split()))$/;"	v
+ss	leetcode90.cpp	/^    set<vector<int> > ss;$/;"	m	class:Solution	file:
+subsetsWithDup	leetcode90.cpp	/^    vector<vector<int>> subsetsWithDup(vector<int>& nums) {$/;"	f	class:Solution
+twoSum	leetcode1.cpp	/^    vector<int> twoSum(vector<int>& nums, int target) {$/;"	f	class:Solution
+work	2-2-1.cpp	/^void work() {$/;"	f
+x	Reservoir.py	/^    x = int(input())$/;"	v
+zt	PowderHan.vim	/^normal! zt$/;"	m
