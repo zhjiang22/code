@@ -1,2 +1,0 @@
--gdb-set mi-async on
-=thread-group-added,id="i1"

@@ -21,9 +21,12 @@
 <NL>	PowderHan.vim	/^nnoremap <NL> j  $/;"	m
 <Plug>NetrwBrowseX	PowderHan.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())$/;"	m
 <Plug>NetrwBrowseXVis	PowderHan.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
+A	try1.cpp	2;"	d	file:
+Box	try.cpp	/^class Box {$/;"	c	file:
 CFLAGS	makefile	/^CFLAGS= -g -std=c++11 -Wall$/;"	m
 LDLIBS	makefile	/^LDLIBS= -lm$/;"	m
 MAXN	2-2-1.cpp	/^const int MAXN = 100005;$/;"	v
+Max	try.cpp	/^inline T Max(T const &a, T const& b) {$/;"	f
 Q	PowderHan.vim	/^map Q gq$/;"	m
 SessionLoad	PowderHan.vim	/^let SessionLoad = 1$/;"	v
 Solution	2-9-1.cpp	/^class Solution {$/;"	c	file:
@@ -33,7 +36,13 @@ Solution	leetcode1.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode121.py	/^class Solution:$/;"	c
 Solution	leetcode2.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode21.py	/^class Solution:$/;"	c
+Solution	leetcode26.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode28.py	/^class Solution:$/;"	c
+Solution	leetcode34.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode35.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode36.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode90.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode973.py	/^class Solution:$/;"	c
 Solution	leetcode989.cpp	/^class Solution {$/;"	c	file:
 a	2-2-1.cpp	/^int a[MAXN];$/;"	v
 a	2-5-2.cpp	/^int a[10005];$/;"	v
@@ -41,6 +50,9 @@ a	2-6-1.py	/^a = input()$/;"	v
 a	CF1104B.py	/^a = []$/;"	v
 a	Reservoir.py	/^a = []$/;"	v
 a	luogu1071.py	/^a = input().rstrip()$/;"	v
+a	try.cpp	/^    int a, b;$/;"	m	class:Box	file:
+add	try.cpp	/^    Box add(const Box& t) const {$/;"	f	class:Box
+add	try.cpp	/^    int add(int a, int b) {$/;"	f	namespace:env
 addToArrayForm	leetcode989.cpp	/^    vector<int> addToArrayForm(vector<int>& A, int K) {$/;"	f	class:Solution
 addTwoNumbers	leetcode2.cpp	/^    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {$/;"	f	class:Solution
 ans	2-9-3.cpp	/^        ans = min(ans, g[src][dst][i]);$/;"	m	class:Solution	file:
@@ -49,24 +61,32 @@ ans	2-9-3.cpp	/^    int ans = INF;$/;"	m	class:Solution	file:
 ans	CF1104B.py	/^ans = 0$/;"	v
 b	2-6-1.py	/^b = input()$/;"	v
 b	luogu1071.py	/^b = input().rstrip()$/;"	v
+b	try.cpp	/^    int a, b;$/;"	m	class:Box	file:
 c	luogu1071.py	/^c = input().rstrip()$/;"	v
+c	try.cpp	/^    double c;$/;"	m	class:Box	file:
 check	luogu1125.py	/^def check(n):$/;"	f
 cur	CF1104B.py	/^        cur = a.pop()$/;"	v
+d	try.cpp	/^    int d;$/;"	m	class:Box	file:
 dfs	leetcode90.cpp	/^    void dfs(int cur, vector<vector<int> > &ans, vector<int> a, int n) {$/;"	f	class:Solution
+env	try.cpp	/^namespace env {$/;"	n	file:
 f	2-2-1.cpp	/^int f[MAXN][2];$/;"	v
 findCheapestPrice	2-9-3.cpp	/^    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {$/;"	f	class:Solution
+getidx	leetcode36.cpp	/^    inline int getidx(int x, int y) {$/;"	f	class:Solution
 gx	PowderHan.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 gx	PowderHan.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
 init	2-2-1.cpp	/^void init() {$/;"	f
+isValidSudoku	leetcode36.cpp	/^    bool isValidSudoku(vector<vector<char>>& board) {$/;"	f	class:Solution
 j	Reservoir.py	/^    j = random.randint(1, i)$/;"	v
 jj	PowderHan.vim	/^inoremap jj $/;"	m
 k	Reservoir.py	/^k = int(input())$/;"	v
+kClosest	leetcode973.py	/^    def kClosest(self, points, K):$/;"	m	class:Solution
 main	2-2-1.cpp	/^int main() {$/;"	f
 main	2-5-2.cpp	/^int main() {$/;"	f
 main	2-9-1.cpp	/^int main() {$/;"	f
 main	2-9-2.cpp	/^int main() {$/;"	f
 main	2-9-3.cpp	/^int main() {$/;"	f
 main	try.cpp	/^int main() {$/;"	f
+main	try1.cpp	/^int main() {  $/;"	f
 main	ttt/i.cpp	/^int main() {$/;"	f
 maxProfit	leetcode121.py	/^    def maxProfit(self, prices):$/;"	m	class:Solution
 maxans	luogu1125.py	/^maxans = 0$/;"	v
@@ -83,8 +103,10 @@ now	leetcode90.cpp	/^    vector<int> now;$/;"	m	class:Solution	file:
 numSubarraysWithSum	2-9-2.cpp	/^    int numSubarraysWithSum(vector<int>& A, int S) {$/;"	f	class:Solution
 numUniqueEmails	2-9-1.cpp	/^    int numUniqueEmails(vector<string>& emails) {$/;"	f	class:Solution
 ok	2-6-1.py	/^def ok(c):$/;"	f
+operator +	try.cpp	/^    Box operator+(const Box& t) const {$/;"	f	class:Box
 powderhan	2-9-2.cpp	/^}powderhan;$/;"	v	typeref:class:Solution
 ppp	2-9-1.cpp	/^}ppp;$/;"	v	typeref:class:Solution
+removeDuplicates	leetcode26.cpp	/^    int removeDuplicates(vector<int>& nums) {$/;"	f	class:Solution
 s	CF1104B.py	/^s = input()$/;"	v
 s	luogu1071.py	/^s = {}$/;"	v
 s	luogu1125.py	/^s = input()$/;"	v
@@ -96,8 +118,11 @@ s:l	PowderHan.vim	/^let s:l = 14 - ((13 * winheight(0) + 25) \/ 50)$/;"	v
 s:so_save	PowderHan.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
 s:sx	PowderHan.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
 s:wipebuf	PowderHan.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+searchInsert	leetcode35.cpp	/^    int searchInsert(vector<int>& nums, int target) {$/;"	f	class:Solution
+searchRange	leetcode34.cpp	/^    vector<int> searchRange(vector<int>& nums, int target) {$/;"	f	class:Solution
 slist	luogu1012.py	/^slist = list(map(str, input().split()))$/;"	v
 ss	leetcode90.cpp	/^    set<vector<int> > ss;$/;"	m	class:Solution	file:
+strStr	leetcode28.py	/^    def strStr(self, haystack, needle):$/;"	m	class:Solution
 subsetsWithDup	leetcode90.cpp	/^    vector<vector<int>> subsetsWithDup(vector<int>& nums) {$/;"	f	class:Solution
 twoSum	leetcode1.cpp	/^    vector<int> twoSum(vector<int>& nums, int target) {$/;"	f	class:Solution
 work	2-2-1.cpp	/^void work() {$/;"	f
