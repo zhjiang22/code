@@ -23,6 +23,11 @@ namespace env {
     int add(int a, int b) {
         return a + b;
     }
+    namespace odd {
+        int sub(int a, int b) {
+            return a - b;
+        }
+    }
 };
 
 template <class T>
@@ -30,11 +35,12 @@ inline T Max(T const &a, T const& b) {
     return a < b? b : a;
 }
 
-using namespace env;
 
 int main() {
     int a, b;
-    a = 6, b = 1;
+    cin >> a >> b;
+    cout << a << " " << b << endl;
+    cout << env::odd::sub(a, b) << endl;
     std::cout << env::add(a, b) << std::endl;
     std::cout << Max(a, b) << std::endl;
     return 0;
