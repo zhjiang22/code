@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 class Solution {
 public:
     int found(vector<int> nums, int L, int R, int keys) {
