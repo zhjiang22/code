@@ -1,0 +1,228 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add_Edge	Kruskal.cpp	/^inline void Add_Edge(const int &u, const int &v, const double &w)$/;"	f
+Ant	proj2.py	/^class Ant(object):$/;"	c
+Asking_the_icecream	1-30-1.py	/^    def Asking_the_icecream(self):$/;"	m	class:IceCreamStand
+Asking_the_icecream	try.py	/^    def Asking_the_icecream(self):$/;"	m	class:IceCreamStand
+Book	UVA230.cpp	/^struct Book {$/;"	s	file:
+Edge	Kruskal.cpp	/^struct Edge$/;"	s	file:
+GA	proj1.py	/^class GA(object):$/;"	c
+IceCreamStand	1-30-1.py	/^class IceCreamStand(Restaurant):$/;"	c
+IceCreamStand	try.py	/^class IceCreamStand(Restaurant):$/;"	c
+Kruskal	Kruskal.cpp	/^void Kruskal()$/;"	f
+MAXN	UVA12100.cpp	/^const int MAXN = 105;$/;"	v
+Map	UVA230.cpp	/^map<string,int> Map;$/;"	v
+Node	2019-1-1.cpp	/^typedef struct Node$/;"	s	file:
+Node	2019-1-1.cpp	/^} Node;$/;"	t	typeref:struct:Node	file:
+Pi	1-30-2.py	/^Pi = 3.14159$/;"	v
+Restaurant	1-30-1.py	/^class Restaurant:$/;"	c
+Restaurant	try.py	/^class Restaurant:$/;"	c
+S	1-30-2.py	/^S = math.sqrt(p * (p - a) * (p - b) * (p - c))$/;"	v
+TSP	proj2.py	/^class TSP(object):$/;"	c
+TreeNode	2019-1-2.c	/^typedef struct TreeNode$/;"	s	file:
+TreeNode	2019-1-2.c	/^} TreeNode;$/;"	t	typeref:struct:TreeNode	file:
+Work_Borrow	UVA230.cpp	/^void Work_Borrow() {$/;"	f
+Work_Return	UVA230.cpp	/^void Work_Return() {$/;"	f
+Work_Shelve	UVA230.cpp	/^void Work_Shelve() {$/;"	f
+__NODE_H__	2019-1-1.cpp	4;"	d	file:
+__bindEvents	proj2.py	/^    def __bindEvents(self):$/;"	m	class:TSP	file:
+__cal_total_distance	proj2.py	/^    def __cal_total_distance(self):$/;"	m	class:Ant	file:
+__choice_next_city	proj2.py	/^    def __choice_next_city(self):$/;"	m	class:Ant	file:
+__clean_data	proj2.py	/^    def __clean_data(self):$/;"	m	class:Ant	file:
+__init__	1-30-1.py	/^    def __init__(self, restaurant_name, cuisine_type, number_served = 0, IceCream_type = -1):$/;"	m	class:IceCreamStand
+__init__	1-30-1.py	/^    def __init__(self, restaurant_name, cuisine_type, number_served=0):$/;"	m	class:Restaurant
+__init__	proj1.py	/^    def __init__(self,population_size,chromosome_length,max_value,pc,pm):$/;"	m	class:GA
+__init__	proj2.py	/^    def __init__(self, root, width = 800, height = 600, n = city_num):$/;"	m	class:TSP
+__init__	proj2.py	/^    def __init__(self,ID):$/;"	m	class:Ant
+__init__	try.py	/^    def __init__(self, restaurant_name, cuisine_type, number_served = 0, IceCream_type = -1):$/;"	m	class:IceCreamStand
+__init__	try.py	/^    def __init__(self, restaurant_name, cuisine_type, number_served=0):$/;"	m	class:Restaurant
+__move	proj2.py	/^    def __move(self, next_city):$/;"	m	class:Ant	file:
+__update_pheromone_gragh	proj2.py	/^    def __update_pheromone_gragh(self):$/;"	m	class:TSP	file:
+a	1-19-1.cpp	/^int a[1000005];$/;"	v
+a	1-19-2.cpp	/^int a[1000005];$/;"	v
+a	1-19-3.cpp	/^int a[100005];$/;"	v
+a	1-21-1.cpp	/^int a[100005];$/;"	v
+a	1-21-2.cpp	/^int a[1005];$/;"	v
+a	1-30-2.py	/^a = int(input())$/;"	v
+a	1-31-2.py	/^a = input()$/;"	v
+a	1-31-2.py	/^a = list(map(int, input().split()))$/;"	v
+a	2018-1-3.c	/^    int a, b;$/;"	m	struct:tp	file:
+a	2018-1-3.c	/^tp a[160 * 160];$/;"	v
+a	2018-1-4.c	/^int a[100];$/;"	v
+a	UVA12100.cpp	/^} a[MAXN];$/;"	v	typeref:struct:job
+a1	1-30-2.py	/^a1 = int(input())$/;"	v
+a2	1-30-2.py	/^a2 = int(input())$/;"	v
+add_edge1	Kruskal.cpp	/^void add_edge1()$/;"	f
+add_edge2	Kruskal.cpp	/^void add_edge2()$/;"	f
+add_edge3	Kruskal.cpp	/^void add_edge3()$/;"	f
+add_edge4	Kruskal.cpp	/^void add_edge4()$/;"	f
+alist	1-30-3.py	/^alist = list(map(int, input().split()))$/;"	v
+alist	1-31-2.py	/^alist = list(map(int, input().split()))$/;"	v
+ans	1-30-2.py	/^ans = 0$/;"	v
+ans	1-31-2.py	/^    ans = 1$/;"	v
+ans	1-31-2.py	/^    ans = ord(a[i]) + d$/;"	v
+ans	1-31-2.py	/^ans = 0$/;"	v
+author	UVA230.cpp	/^    string author;$/;"	m	struct:Book	file:
+b	1-21-2.cpp	/^int b[1005];$/;"	v
+b	1-30-2.py	/^b = int(input())$/;"	v
+b	1-31-2.py	/^b = []$/;"	v
+b	2018-1-3.c	/^    int a, b;$/;"	m	struct:tp	file:
+b	UVA230.cpp	/^vector<Book> b;$/;"	v
+b2d	proj1.py	/^    def b2d(self,best_individual):$/;"	m	class:GA
+best	proj1.py	/^    def best(self,population,fitness_value):$/;"	m	class:GA
+blist	1-31-2.py	/^blist = list(map(int, input().split()))$/;"	v
+c	1-30-2.py	/^c = int(input())$/;"	v
+c	1-30-2.py	/^c = math.sqrt(a ** 2 + b ** 2)$/;"	v
+check	1-19-3.cpp	/^int check(int mid)$/;"	f
+chromosome_length	proj1.py	/^    chromosome_length=20$/;"	v	class:GA
+clear	proj2.py	/^    def clear(self):$/;"	m	class:TSP
+cnt	UVA12100.cpp	/^int cnt[15];$/;"	v
+crossover	proj1.py	/^    def crossover(self,population):$/;"	m	class:GA
+cumsum	proj1.py	/^    def cumsum(self,fitness1):$/;"	m	class:GA
+d	1-30-2.py	/^d = a2 - a1$/;"	v
+d	1-31-2.py	/^d = ord('E') - ord(a[-1])$/;"	v
+del	2019-1-1.cpp	/^void del(Node **top)$/;"	f
+deleteTree	2019-1-2.c	/^void deleteTree(TreeNode *root)$/;"	f
+describe_restaurant	1-30-1.py	/^    def describe_restaurant(self):$/;"	m	class:Restaurant
+describe_restaurant	try.py	/^    def describe_restaurant(self):$/;"	m	class:Restaurant
+distance_graph	proj2.py	/^distance_graph = [ [0.0 for col in range(city_num)] for raw in range(city_num)]$/;"	v
+distance_x	proj2.py	/^distance_x = [$/;"	v
+distance_y	proj2.py	/^distance_y = [$/;"	v
+e	Kruskal.cpp	/^} e[1005];$/;"	v	typeref:struct:Edge
+f	try1.c	/^void (*(f)())(int, float) {$/;"	f
+fa	Kruskal.cpp	/^int fa[1005];$/;"	v
+fitness	proj1.py	/^    def fitness(self,function1):$/;"	m	class:GA
+foo	try1.c	/^void foo(int i,float f) {$/;"	f
+function	proj1.py	/^    def function(self,population):$/;"	m	class:GA
+ga	proj1.py	/^    ga=GA(population_size,chromosome_length,max_value,pc,pm)$/;"	v	class:GA
+gcd	2018-1-3.c	/^int gcd(int a, int b){$/;"	f
+getfather	1-31-1.py	/^def getfather(x):$/;"	f
+getfather	Kruskal.cpp	/^inline int getfather(int x)$/;"	f
+getfather	first.cpp	/^int getfather(int x) {$/;"	f
+idx	UVA12100.cpp	/^    int idx;$/;"	m	struct:job	file:
+in_dfs	2018-1-4.c	/^void in_dfs(int x) {$/;"	f
+increment_number_served	1-30-1.py	/^    def increment_number_served(self, numbers=1):$/;"	m	class:Restaurant
+increment_number_served	try.py	/^    def increment_number_served(self, numbers=1):$/;"	m	class:Restaurant
+init	1-31-1.py	/^def init():$/;"	f
+init	Kruskal.cpp	/^void init()$/;"	f
+init	UVA12100.cpp	/^void init() {$/;"	f
+init	UVA230.cpp	/^void init() {$/;"	f
+init	first.cpp	/^void init() {$/;"	f
+job	UVA12100.cpp	/^struct job {$/;"	s	file:
+l	1-21-3.cpp	/^int l, ok;$/;"	v
+left	2019-1-2.c	/^    struct TreeNode *left;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	file:
+len	2018-1-3.c	/^int len;$/;"	v
+line	proj2.py	/^    def line(self, order):$/;"	m	class:TSP
+line2	proj2.py	/^        def line2(i1, i2):$/;"	f	function:TSP.line
+m	1-19-3.cpp	/^int m;$/;"	v
+m	1-21-1.cpp	/^int n, m;$/;"	v
+m	UVA12100.cpp	/^int n, m;$/;"	v
+main	1-19-1.cpp	/^int main()$/;"	f
+main	1-19-2.cpp	/^int main() {$/;"	f
+main	1-19-3.cpp	/^int main()$/;"	f
+main	1-21-1.cpp	/^int main()$/;"	f
+main	1-21-2.cpp	/^int main()$/;"	f
+main	1-21-3.cpp	/^int main()$/;"	f
+main	2018-1-3.c	/^int main() {$/;"	f
+main	2018-1-4.c	/^int main() {$/;"	f
+main	2019-1-1.cpp	/^int main()$/;"	f
+main	2019-1-2.c	/^int main()$/;"	f
+main	Kruskal.cpp	/^int main()$/;"	f
+main	UVA12100.cpp	/^int main() {$/;"	f
+main	UVA230.cpp	/^int main() {$/;"	f
+main	first.cpp	/^int main() {$/;"	f
+main	proj1.py	/^    def main(self):$/;"	m	class:GA
+main	try.c	/^int main() {$/;"	f
+main	try1.c	/^int main() {$/;"	f
+mainloop	proj2.py	/^    def mainloop(self):$/;"	m	class:TSP
+max_value	proj1.py	/^    max_value=10$/;"	v	class:GA
+mutation	proj1.py	/^    def mutation(self,population):$/;"	m	class:GA
+n	1-19-1.cpp	/^int n;$/;"	v
+n	1-19-2.cpp	/^int n;$/;"	v
+n	1-19-3.cpp	/^int n;$/;"	v
+n	1-21-1.cpp	/^int n, m;$/;"	v
+n	1-21-2.cpp	/^int n;$/;"	v
+n	1-30-2.py	/^n = int(input())$/;"	v
+n	1-30-3.py	/^n = len(alist)$/;"	v
+n	1-31-2.py	/^n = len(a)$/;"	v
+n	1-31-2.py	/^n = len(alist)$/;"	v
+n	1-31-2.py	/^n = len(s)$/;"	v
+n	2018-1-3.c	/^int n;$/;"	v
+n	2018-1-4.c	/^int n;$/;"	v
+n	Kruskal.cpp	/^int n = 14;$/;"	v
+n	UVA12100.cpp	/^int n, m;$/;"	v
+n	UVA230.cpp	/^int n;$/;"	v
+new	proj2.py	/^    def new(self, evt = None):$/;"	m	class:TSP
+next	2019-1-1.cpp	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node	file:
+num	2019-1-1.cpp	/^    int num;$/;"	m	struct:Node	file:
+ok	1-21-3.cpp	/^int l, ok;$/;"	v
+open_restaurant	1-30-1.py	/^    def open_restaurant(self):$/;"	m	class:Restaurant
+open_restaurant	try.py	/^    def open_restaurant(self):$/;"	m	class:Restaurant
+operator <	Kruskal.cpp	/^    bool operator<(const Edge &e) const$/;"	f	struct:Edge
+operator <	UVA230.cpp	/^    bool operator<(const Book & p)const {$/;"	f	struct:Book
+p	1-30-2.py	/^p = (a + b + c) \/ 2$/;"	v
+p	1-31-2.py	/^p = ''$/;"	v
+pc	proj1.py	/^    pc=0.6$/;"	v	class:GA
+pheromone_graph	proj2.py	/^pheromone_graph = [ [1.0 for col in range(city_num)] for raw in range(city_num)]$/;"	v
+plot	proj1.py	/^    def plot(self, results):$/;"	m	class:GA
+pm	proj1.py	/^    pm=0.01$/;"	v	class:GA
+pop	2019-1-1.cpp	/^int pop(Node **top)$/;"	f
+population_size	proj1.py	/^    population_size=400$/;"	v	class:GA
+postOrder	2019-1-2.c	/^void postOrder(TreeNode *root)$/;"	f
+post_dfs	2018-1-4.c	/^void post_dfs(int x) {$/;"	f
+pre_dfs	2018-1-4.c	/^void pre_dfs(int x) {$/;"	f
+push	2019-1-1.cpp	/^void push(Node **top, int n)$/;"	f
+quite	proj2.py	/^    def quite(self, evt):$/;"	m	class:TSP
+r	1-30-2.py	/^r = int(input())$/;"	v
+rank	UVA12100.cpp	/^    int rank;$/;"	m	struct:job	file:
+reConstructBinaryTree	2019-1-2.c	/^TreeNode *reConstructBinaryTree(int *pre, int *in, int n)$/;"	f
+reset_number_served	1-30-1.py	/^    def reset_number_served(self):$/;"	m	class:IceCreamStand
+reset_number_served	1-30-1.py	/^    def reset_number_served(self):$/;"	m	class:Restaurant
+reset_number_served	try.py	/^    def reset_number_served(self):$/;"	m	class:IceCreamStand
+reset_number_served	try.py	/^    def reset_number_served(self):$/;"	m	class:Restaurant
+restaurant	1-30-1.py	/^restaurant = IceCreamStand('PowderHan\\'s restaurant', 1)$/;"	v
+restaurant	try.py	/^restaurant = IceCreamStand('PowderHan\\'s restaurant', 1)$/;"	v
+right	2019-1-2.c	/^    struct TreeNode *right;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	file:
+s	1-21-3.cpp	/^char s[1000];$/;"	v
+s	1-30-2.py	/^s = a * b$/;"	v
+s	1-30-2.py	/^s = list(map(str, input().split()))$/;"	v
+s	1-30-2.py	/^s = str(input())$/;"	v
+s	1-31-2.py	/^s = input()$/;"	v
+s	1-31-2.py	/^s = set()$/;"	v
+search_path	proj2.py	/^    def search_path(self):$/;"	m	class:Ant
+search_path	proj2.py	/^    def search_path(self, evt = None):$/;"	m	class:TSP
+selection	proj1.py	/^    def selection(self,population,fitness_value):$/;"	m	class:GA
+set_number_served	1-30-1.py	/^    def set_number_served(self, numbers):$/;"	m	class:Restaurant
+set_number_served	try.py	/^    def set_number_served(self, numbers):$/;"	m	class:Restaurant
+shelve	UVA230.cpp	/^set<Book> shelve;$/;"	v
+species_origin	proj1.py	/^    def species_origin(self):$/;"	m	class:GA
+stop	proj2.py	/^    def stop(self, evt):$/;"	m	class:TSP
+sum	proj1.py	/^    def sum(self,fitness_value):$/;"	m	class:GA
+swap	2018-1-3.c	/^void swap(tp *a, tp *b){$/;"	f
+t	UVA12100.cpp	/^int t;$/;"	v
+table	UVA230.cpp	/^set<Book> table;$/;"	v
+title	UVA230.cpp	/^    string title;$/;"	m	struct:Book	file:
+title	proj2.py	/^    def title(self, s):$/;"	m	class:TSP
+tot	Kruskal.cpp	/^int tot;$/;"	v
+tp	2018-1-3.c	/^typedef struct tp {$/;"	s	file:
+tp	2018-1-3.c	/^} tp;$/;"	t	typeref:struct:tp	file:
+translation	proj1.py	/^    def translation(self,population):$/;"	m	class:GA
+u	Kruskal.cpp	/^    int u, v;$/;"	m	struct:Edge	file:
+v	Kruskal.cpp	/^    int u, v;$/;"	m	struct:Edge	file:
+val	2019-1-2.c	/^    int val;$/;"	m	struct:TreeNode	file:
+w	Kruskal.cpp	/^    double w;$/;"	m	struct:Edge	file:
+work	1-31-1.py	/^def work():$/;"	f
+work	Kruskal.cpp	/^void work()$/;"	f
+work	UVA12100.cpp	/^void work() {$/;"	f
+work	UVA230.cpp	/^void work() {$/;"	f
+work	first.cpp	/^void work() {$/;"	f
+work	model.py	/^def work(a, b):$/;"	f
+work	try_1.py	/^def work(n):$/;"	f
+x	1-19-1.cpp	/^int x;$/;"	v
+x	1-19-2.cpp	/^int x;$/;"	v
+x	2018-1-3.c	/^    double x;$/;"	m	struct:tp	file:
+x	try1.c	/^typedef void (*(*x)())(int, float);$/;"	t	file:

@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CopyDate	3-7.cpp	/^Date *CopyDate(const Date *date) {$/;"	f
+CreateDate	3-7.cpp	/^Date *CreateDate(int year, int month, int day) {$/;"	f
+Date	3-7.cpp	/^} Date;$/;"	t	typeref:struct:__anon1	file:
+DecreaseDate	3-7.cpp	/^void DecreaseDate(Date *date) {$/;"	f
+DestroyDate	3-7.cpp	/^void DestroyDate(Date **date) {$/;"	f
+DestroyDateString	3-7.cpp	/^void DestroyDateString(char **p) {$/;"	f
+GetDateString	3-7.cpp	/^char* GetDateString(const Date *date) {$/;"	f
+GetDay	3-7.cpp	/^int GetDay(const Date *date) {$/;"	f
+GetMonth	3-7.cpp	/^int GetMonth(const Date *date) {$/;"	f
+GetYear	3-7.cpp	/^int GetYear(const Date *date) {$/;"	f
+IncreaseDate	3-7.cpp	/^void IncreaseDate(Date *date) {$/;"	f
+SetDate	3-7.cpp	/^void SetDate(Date *date, int year, int month, int day) {$/;"	f
+SetDay	3-7.cpp	/^void SetDay(Date *date, int day) {$/;"	f
+SetMonth	3-7.cpp	/^void SetMonth(Date *date, int month) {$/;"	f
+SetYear	3-7.cpp	/^void SetYear(Date *date, int year) {$/;"	f
+TestDate	3-7.cpp	/^void TestDate(Date* date, int after, int before) {$/;"	f
+day	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:
+main	3-7.cpp	/^int main() {$/;"	f
+month	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:
+month_days	3-7.cpp	/^int month_days[15] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};$/;"	v
+year	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:

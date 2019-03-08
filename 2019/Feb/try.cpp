@@ -15,6 +15,10 @@ public:
         d.a = a + t.a;  d.b = b + t.b;  d.c = c + t.c;
         return d;
     }
+    friend ostream & operator << (ostream & os, const Box & box) {
+        os << box.a << " " << box.b << " " << box.c << endl;
+        return os;
+    }
 private:
     int d;
 };
@@ -43,5 +47,8 @@ int main() {
     cout << env::odd::sub(a, b) << endl;
     std::cout << env::add(a, b) << std::endl;
     std::cout << Max(a, b) << std::endl;
+    Box P;
+    P.a = 1;    P.b = 2;    P.c = 4.4;
+    std::cout << P << endl;
     return 0;
 }

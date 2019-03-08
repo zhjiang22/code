@@ -22,29 +22,49 @@
 <Plug>NetrwBrowseX	PowderHan.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())$/;"	m
 <Plug>NetrwBrowseXVis	PowderHan.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
 A	try1.cpp	2;"	d	file:
+Add_Edge	luogu1396.cpp	/^inline void Add_Edge(const int &u, const int &v, const int &w) {$/;"	f
 Box	try.cpp	/^class Box {$/;"	c	file:
 CFLAGS	makefile	/^CFLAGS= -g -std=c++11 -Wall$/;"	m
+DATE_HPP_	2-27-2.cpp	7;"	d	file:
+Date	2-27-2.cpp	/^class Date {$/;"	c	file:
+DaysOfMonth	2-27-2.cpp	/^int DaysOfMonth(int year_, int month_) {$/;"	f
+Edge	luogu1396.cpp	/^    Edge() {$/;"	f	struct:Edge
+Edge	luogu1396.cpp	/^struct Edge {$/;"	s	file:
+Found	2-27.cpp	/^int Found(int x) {$/;"	f
+INF	luogu1396.cpp	/^const int INF = 0x3f3f3f3f;$/;"	v
 LDLIBS	makefile	/^LDLIBS= -lm$/;"	m
 MAXN	2-2-1.cpp	/^const int MAXN = 100005;$/;"	v
+MAXN	2-27.cpp	/^const int MAXN = 1000005;$/;"	v
+MAXN	luogu1396.cpp	/^const int MAXN = 10005;$/;"	v
 Max	try.cpp	/^inline T Max(T const &a, T const& b) {$/;"	f
 Q	PowderHan.vim	/^map Q gq$/;"	m
 SessionLoad	PowderHan.vim	/^let SessionLoad = 1$/;"	v
+Solution	17.letter-combinations-of-a-phone-number.cpp	/^class Solution {$/;"	c	file:
 Solution	2-9-1.cpp	/^class Solution {$/;"	c	file:
 Solution	2-9-2.cpp	/^class Solution {$/;"	c	file:
 Solution	2-9-3.cpp	/^class Solution {$/;"	c	file:
+Solution	69.sqrtx.cpp	/^class Solution {$/;"	c	file:
+Solution	70.climbing-stairs.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode1.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode121.py	/^class Solution:$/;"	c
 Solution	leetcode2.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode203.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode21.py	/^class Solution:$/;"	c
 Solution	leetcode26.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode28.py	/^class Solution:$/;"	c
+Solution	leetcode33.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode34.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode35.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode36.cpp	/^class Solution {$/;"	c	file:
+Solution	leetcode795.py	/^class Solution:$/;"	c
 Solution	leetcode90.cpp	/^class Solution {$/;"	c	file:
 Solution	leetcode973.py	/^class Solution:$/;"	c
 Solution	leetcode989.cpp	/^class Solution {$/;"	c	file:
+TestDate	2-27-2.cpp	/^void TestDate(Date& date, int after, int before) {$/;"	f
+a	2-12-1.cpp	/^int a[1006];$/;"	v
 a	2-2-1.cpp	/^int a[MAXN];$/;"	v
+a	2-23.cpp	/^int a[100005], b[100005];$/;"	v
+a	2-27.cpp	/^long long a[MAXN];$/;"	v
 a	2-5-2.cpp	/^int a[10005];$/;"	v
 a	2-6-1.py	/^a = input()$/;"	v
 a	CF1104B.py	/^a = []$/;"	v
@@ -58,58 +78,106 @@ addTwoNumbers	leetcode2.cpp	/^    ListNode* addTwoNumbers(ListNode* l1, ListNode
 ans	2-9-3.cpp	/^        ans = min(ans, g[src][dst][i]);$/;"	m	class:Solution	file:
 ans	2-9-3.cpp	/^    if (ans == INF)    ans = -1;$/;"	m	class:Solution	file:
 ans	2-9-3.cpp	/^    int ans = INF;$/;"	m	class:Solution	file:
+ans	51NOD1013.py	/^    ans = (ans - 1 + 1000000007) \/\/ 2$/;"	v
+ans	51NOD1013.py	/^    ans = (ans - 1) \/\/ 2$/;"	v
+ans	51NOD1013.py	/^ans = cal(n+1)$/;"	v
 ans	CF1104B.py	/^ans = 0$/;"	v
+b	2-23.cpp	/^int a[100005], b[100005];$/;"	v
 b	2-6-1.py	/^b = input()$/;"	v
 b	luogu1071.py	/^b = input().rstrip()$/;"	v
 b	try.cpp	/^    int a, b;$/;"	m	class:Box	file:
+binary_found	leetcode33.cpp	/^    int binary_found(int l, int r, int val, vector<int> nums) {$/;"	f	class:Solution	file:
+c	2-23.cpp	/^int c[200005];$/;"	v
 c	luogu1071.py	/^c = input().rstrip()$/;"	v
 c	try.cpp	/^    double c;$/;"	m	class:Box	file:
+cal	51NOD1013.py	/^def cal(n):$/;"	f
+cal	leetcode795.py	/^    def cal(A, x):$/;"	f
 check	luogu1125.py	/^def check(n):$/;"	f
+check	luogu1396.cpp	/^bool check(const int &val) {$/;"	f
+climbStairs	70.climbing-stairs.cpp	/^    int climbStairs(int n) {$/;"	f	class:Solution
 cur	CF1104B.py	/^        cur = a.pop()$/;"	v
+d	luogu1396.cpp	/^int d[MAXN];$/;"	v
 d	try.cpp	/^    int d;$/;"	m	class:Box	file:
+day	2-27-2.cpp	/^int Date::day()const {return day_;}$/;"	f	class:Date
+day_	2-27-2.cpp	/^  int day_;$/;"	m	class:Date	file:
+daysOfMonth	2-27-2.cpp	/^int Date::daysOfMonth(int year, int month) const {$/;"	f	class:Date
+decrement	2-27-2.cpp	/^void Date::decrement() {$/;"	f	class:Date
 dfs	leetcode90.cpp	/^    void dfs(int cur, vector<vector<int> > &ans, vector<int> a, int n) {$/;"	f	class:Solution
+e	luogu1396.cpp	/^}e[MAXN << 2];$/;"	v	typeref:struct:Edge
 env	try.cpp	/^namespace env {$/;"	n	file:
 f	2-2-1.cpp	/^int f[MAXN][2];$/;"	v
 findCheapestPrice	2-9-3.cpp	/^    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {$/;"	f	class:Solution
+first	luogu1396.cpp	/^int first[MAXN];$/;"	v
+found	leetcode33.cpp	/^int found(vector<int> nums, int L, int R, int keys) {$/;"	f	class:Solution	file:
 getidx	leetcode36.cpp	/^    inline int getidx(int x, int y) {$/;"	f	class:Solution
 gx	PowderHan.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 gx	PowderHan.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
+increment	2-27-2.cpp	/^void Date::increment() {$/;"	f	class:Date
 init	2-2-1.cpp	/^void init() {$/;"	f
+init	luogu1396.cpp	/^void init() {$/;"	f
+inq	luogu1396.cpp	/^bool inq[MAXN];$/;"	v
 isValidSudoku	leetcode36.cpp	/^    bool isValidSudoku(vector<vector<char>>& board) {$/;"	f	class:Solution
+is_run	2-27-2.cpp	/^bool is_run(int x) {$/;"	f
 j	Reservoir.py	/^    j = random.randint(1, i)$/;"	v
 jj	PowderHan.vim	/^inoremap jj $/;"	m
 k	Reservoir.py	/^k = int(input())$/;"	v
 kClosest	leetcode973.py	/^    def kClosest(self, points, K):$/;"	m	class:Solution
+l	2-23.cpp	/^int l;$/;"	v
+l1	2-23.cpp	/^int l1, l2;$/;"	v
+l2	2-23.cpp	/^int l1, l2;$/;"	v
+letterCombinations	17.letter-combinations-of-a-phone-number.cpp	/^    vector<string> letterCombinations(string digits) {$/;"	f	class:Solution
+m	luogu1396.cpp	/^int n, m;$/;"	v
+main	2-12-1.cpp	/^int main() {$/;"	f
 main	2-2-1.cpp	/^int main() {$/;"	f
+main	2-23.cpp	/^int main() {$/;"	f
+main	2-27-2.cpp	/^int main() {$/;"	f
+main	2-27.cpp	/^int main() {$/;"	f
 main	2-5-2.cpp	/^int main() {$/;"	f
 main	2-9-1.cpp	/^int main() {$/;"	f
 main	2-9-2.cpp	/^int main() {$/;"	f
 main	2-9-3.cpp	/^int main() {$/;"	f
+main	luogu1396.cpp	/^int main() {$/;"	f
 main	try.cpp	/^int main() {$/;"	f
 main	try1.cpp	/^int main() {  $/;"	f
 main	ttt/i.cpp	/^int main() {$/;"	f
 maxProfit	leetcode121.py	/^    def maxProfit(self, prices):$/;"	m	class:Solution
 maxans	luogu1125.py	/^maxans = 0$/;"	v
+maxw	luogu1396.cpp	/^int maxw;$/;"	v
 mergeTwoLists	leetcode21.py	/^    def mergeTwoLists(self, l1, l2):$/;"	m	class:Solution
 minans	luogu1125.py	/^minans = 10000$/;"	v
+month	2-27-2.cpp	/^int Date::month()const {return month_;}$/;"	f	class:Date
+month_	2-27-2.cpp	/^  int month_;$/;"	m	class:Date	file:
+mySqrt	69.sqrtx.cpp	/^    int mySqrt(int x) {$/;"	f	class:Solution
+n	2-12-1.cpp	/^int n;$/;"	v
 n	2-2-1.cpp	/^int n;$/;"	v
+n	2-27.cpp	/^long long n;$/;"	v
 n	2-5-2.cpp	/^int n;$/;"	v
 n	2-6-1.py	/^n = len(a)$/;"	v
+n	51NOD1013.py	/^n = int(input())$/;"	v
 n	CF1104A.py	/^n = int(input())$/;"	v
 n	CF1104B.py	/^n = len(s)$/;"	v
 n	luogu1012.py	/^n = int(input())$/;"	v
 n	luogu1071.py	/^n = len(a)$/;"	v
+n	luogu1396.cpp	/^int n, m;$/;"	v
 now	leetcode90.cpp	/^    vector<int> now;$/;"	m	class:Solution	file:
+numSubarrayBoundedMax	leetcode795.py	/^    def numSubarrayBoundedMax(self, A, L, R):$/;"	m	class:Solution
 numSubarraysWithSum	2-9-2.cpp	/^    int numSubarraysWithSum(vector<int>& A, int S) {$/;"	f	class:Solution
 numUniqueEmails	2-9-1.cpp	/^    int numUniqueEmails(vector<string>& emails) {$/;"	f	class:Solution
+nxt	luogu1396.cpp	/^    int to,nxt;$/;"	m	struct:Edge	file:
+odd	try.cpp	/^    namespace odd {$/;"	n	namespace:env	file:
 ok	2-6-1.py	/^def ok(c):$/;"	f
 operator +	try.cpp	/^    Box operator+(const Box& t) const {$/;"	f	class:Box
+operator <<	try.cpp	/^    friend ostream & operator << (ostream & os, const Box & box) {$/;"	f	class:Box
 powderhan	2-9-2.cpp	/^}powderhan;$/;"	v	typeref:class:Solution
 ppp	2-9-1.cpp	/^}ppp;$/;"	v	typeref:class:Solution
 removeDuplicates	leetcode26.cpp	/^    int removeDuplicates(vector<int>& nums) {$/;"	f	class:Solution
+removeElements	leetcode203.cpp	/^    ListNode* removeElements(ListNode* head, int val) {$/;"	f	class:Solution
 s	CF1104B.py	/^s = input()$/;"	v
 s	luogu1071.py	/^s = {}$/;"	v
 s	luogu1125.py	/^s = input()$/;"	v
+s	luogu1396.cpp	/^int s, t;$/;"	v
+s1	2-23.cpp	/^char s1[100005], s2[1000005];$/;"	v
+s2	2-23.cpp	/^char s1[100005], s2[1000005];$/;"	v
 s2	luogu1071.py	/^s2 = {}$/;"	v
 s:cpo_save	PowderHan.vim	/^let s:cpo_save=&cpo$/;"	v
 s:l	PowderHan.vim	/^let s:l = 1 - ((0 * winheight(0) + 11) \/ 23)$/;"	v
@@ -118,13 +186,25 @@ s:l	PowderHan.vim	/^let s:l = 14 - ((13 * winheight(0) + 25) \/ 50)$/;"	v
 s:so_save	PowderHan.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
 s:sx	PowderHan.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
 s:wipebuf	PowderHan.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+search	leetcode33.cpp	/^    int search(vector<int>& nums, int target) {$/;"	f	class:Solution
 searchInsert	leetcode35.cpp	/^    int searchInsert(vector<int>& nums, int target) {$/;"	f	class:Solution
 searchRange	leetcode34.cpp	/^    vector<int> searchRange(vector<int>& nums, int target) {$/;"	f	class:Solution
+setDate	2-27-2.cpp	/^void Date::setDate(int year, int month, int day) {$/;"	f	class:Date
 slist	luogu1012.py	/^slist = list(map(str, input().split()))$/;"	v
 ss	leetcode90.cpp	/^    set<vector<int> > ss;$/;"	m	class:Solution	file:
 strStr	leetcode28.py	/^    def strStr(self, haystack, needle):$/;"	m	class:Solution
+sub	try.cpp	/^        int sub(int a, int b) {$/;"	f	namespace:env::odd
 subsetsWithDup	leetcode90.cpp	/^    vector<vector<int>> subsetsWithDup(vector<int>& nums) {$/;"	f	class:Solution
+t	luogu1396.cpp	/^int s, t;$/;"	v
+to	luogu1396.cpp	/^    int to,nxt;$/;"	m	struct:Edge	file:
+toString	2-27-2.cpp	/^  std::string toString() const {$/;"	f	class:Date
+tot	luogu1396.cpp	/^int tot;$/;"	v
 twoSum	leetcode1.cpp	/^    vector<int> twoSum(vector<int>& nums, int target) {$/;"	f	class:Solution
+update	2-27-2.cpp	/^void update(int& month_, int& day_, int& year_ ) {$/;"	f
+w	luogu1396.cpp	/^    int w;$/;"	m	struct:Edge	file:
 work	2-2-1.cpp	/^void work() {$/;"	f
+work	luogu1396.cpp	/^void work() {$/;"	f
 x	Reservoir.py	/^    x = int(input())$/;"	v
+year	2-27-2.cpp	/^int Date::year()const {return year_;}$/;"	f	class:Date
+year_	2-27-2.cpp	/^  int year_;$/;"	m	class:Date	file:
 zt	PowderHan.vim	/^normal! zt$/;"	m
