@@ -1,0 +1,59 @@
+reverse1
+replace 900 190
+insert1 364
+find 686
+insert1 912
+insert1 497
+find 443
+insert1 491
+insert1 678
+insert2 7 316
+size
+insert1 153
+insert1 94
+insert2 6 284
+insert1 327
+insert1 435
+insert1 845
+insert1 67
+insert1 651
+insert1 31
+at 2
+insert1 265
+replace 543 805
+reverse2 9 11
+reverse1
+replace 581 1013
+reverse2 2 13
+insert1 778
+insert1 987
+insert1 818
+find 410
+reverse1
+insert1 832
+reverse1
+reverse1
+size
+insert1 585
+insert1 1014
+size
+insert1 841
+insert1 173
+insert2 1 532
+insert1 576
+insert1 208
+insert1 708
+insert1 695
+insert2 1 59
+insert1 758
+find 401
+insert1 737
+insert1 543
+reverse2 24 30
+insert1 258
+find 882
+insert2 25 73
+find 126
+insert2 31 153
+insert1 128
+insert1 1002

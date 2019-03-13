@@ -84,6 +84,7 @@ ans	51NOD1013.py	/^ans = cal(n+1)$/;"	v
 ans	CF1104B.py	/^ans = 0$/;"	v
 b	2-23.cpp	/^int a[100005], b[100005];$/;"	v
 b	2-6-1.py	/^b = input()$/;"	v
+b	3-3.cpp	/^char b[1005];$/;"	v
 b	luogu1071.py	/^b = input().rstrip()$/;"	v
 b	try.cpp	/^    int a, b;$/;"	m	class:Box	file:
 binary_found	leetcode33.cpp	/^    int binary_found(int l, int r, int val, vector<int> nums) {$/;"	f	class:Solution	file:
@@ -136,6 +137,7 @@ main	2-5-2.cpp	/^int main() {$/;"	f
 main	2-9-1.cpp	/^int main() {$/;"	f
 main	2-9-2.cpp	/^int main() {$/;"	f
 main	2-9-3.cpp	/^int main() {$/;"	f
+main	3-3.cpp	/^int main() {$/;"	f
 main	luogu1396.cpp	/^int main() {$/;"	f
 main	try.cpp	/^int main() {$/;"	f
 main	try1.cpp	/^int main() {  $/;"	f

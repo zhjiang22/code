@@ -10,6 +10,12 @@ Date	3-7.cpp	/^} Date;$/;"	t	typeref:struct:__anon1	file:
 DecreaseDate	3-7.cpp	/^void DecreaseDate(Date *date) {$/;"	f
 DestroyDate	3-7.cpp	/^void DestroyDate(Date **date) {$/;"	f
 DestroyDateString	3-7.cpp	/^void DestroyDateString(char **p) {$/;"	f
+Example	try.cpp	/^Example::Example() {$/;"	f	class:Example
+Example	try.cpp	/^Example::Example(int a, int b) {$/;"	f	class:Example
+Example	try.cpp	/^Example::Example(int a, int b, int c) {$/;"	f	class:Example
+Example	try.cpp	/^class Example {$/;"	c	file:
+Exnum	try.cpp	/^    static int Exnum;$/;"	m	class:Example	file:
+Exnum	try.cpp	/^int Example::Exnum = 0;$/;"	m	class:Example	file:
 GetDateString	3-7.cpp	/^char* GetDateString(const Date *date) {$/;"	f
 GetDay	3-7.cpp	/^int GetDay(const Date *date) {$/;"	f
 GetMonth	3-7.cpp	/^int GetMonth(const Date *date) {$/;"	f
@@ -20,8 +26,23 @@ SetDay	3-7.cpp	/^void SetDay(Date *date, int day) {$/;"	f
 SetMonth	3-7.cpp	/^void SetMonth(Date *date, int month) {$/;"	f
 SetYear	3-7.cpp	/^void SetYear(Date *date, int year) {$/;"	f
 TestDate	3-7.cpp	/^void TestDate(Date* date, int after, int before) {$/;"	f
+a	try.cpp	/^    int a, b;$/;"	m	class:Example	file:
+add	try.cpp	/^int Example::add(const Example &e) {$/;"	f	class:Example
+b	try.cpp	/^    int a, b;$/;"	m	class:Example	file:
 day	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:
+geta	try.cpp	/^int Example::geta()const {return this -> a;}$/;"	f	class:Example
+getb	try.cpp	/^int Example::getb()const {return this -> b;}$/;"	f	class:Example
+getnum	try.cpp	/^int Example::getnum() {$/;"	f	class:Example
+main	3-10.cpp	/^int main() {$/;"	f
 main	3-7.cpp	/^int main() {$/;"	f
+main	try.cpp	/^int main() {$/;"	f
 month	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:
 month_days	3-7.cpp	/^int month_days[15] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};$/;"	v
+operator +	try.cpp	/^Example operator + (const Example &x, const Example &y) {$/;"	f
+operator <<	try.cpp	/^ostream & operator<<(ostream & os, const Example& x) {$/;"	f
+operator >>	try.cpp	/^istream & operator>>(istream & os, Example& x) {$/;"	f
+seta	try.cpp	/^void Example::seta(int a = -1) {this -> a = a;}$/;"	f	class:Example
+setb	try.cpp	/^void Example::setb(int b = -1) {this -> b = b;}$/;"	f	class:Example
+work	try.cpp	/^void work() {$/;"	f
 year	3-7.cpp	/^  int year, month, day;$/;"	m	struct:__anon1	file:
+~Example	try.cpp	/^Example::~Example() {Exnum--;}$/;"	f	class:Example
